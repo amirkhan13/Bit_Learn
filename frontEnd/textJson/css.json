@@ -1,0 +1,111 @@
+{
+  "introduction": {
+    "what_is_css": "CSS (Cascading Style Sheets) is a stylesheet language used to style HTML documents. It controls layout, colors, fonts, and other visual aspects."
+  },
+  "basics": {
+    "syntax": {
+      "description": "CSS is written as selector { property: value; }",
+      "example": {
+        "code": "p { color: blue; font-size: 16px; }"
+      }
+    },
+    "ways_to_add_css": {
+      "inline_css": "<p style=\"color: red;\">Hello</p>",
+      "internal_css": "<style> p { color: green; } </style>",
+      "external_css": "<link rel=\"stylesheet\" href=\"styles.css\">"
+    }
+  },
+  "selectors": {
+    "basic_selectors": {
+      "universal": "* { margin: 0; padding: 0; }",
+      "element": "h1 { color: purple; }",
+      "class": ".title { font-weight: bold; }",
+      "id": "#main { background-color: lightblue; }"
+    },
+    "grouping_nesting": {
+      "group_selector": "h1, p { color: gray; }",
+      "descendant_selector": "div p { color: red; }"
+    }
+  },
+  "box_model": {
+    "description": "CSS Box Model includes content, padding, border, and margin.",
+    "example": {
+      "code": "div { width: 200px; padding: 20px; border: 5px solid black; margin: 10px; }"
+    }
+  },
+  "typography": {
+    "text_properties": {
+      "color": "color: red;",
+      "font_family": "font-family: Arial, sans-serif;",
+      "font_size": "font-size: 18px;",
+      "font_weight": "font-weight: bold;",
+      "text_align": "text-align: center;",
+      "text_decoration": "text-decoration: none;"
+    }
+  },
+  "layouts": {
+    "display": {
+      "block": "display: block;",
+      "inline": "display: inline;",
+      "flex": "display: flex;"
+    },
+    "positioning": {
+      "static": "position: static;",
+      "relative": "position: relative; top: 10px;",
+      "absolute": "position: absolute;",
+      "fixed": "position: fixed;"
+    },
+    "flexbox": {
+      "container": "display: flex; justify-content: center; align-items: center;"
+    }
+  },
+  "colors_and_backgrounds": {
+    "colors": {
+      "named_colors": "red, blue, green",
+      "hexadecimal": "#ff0000",
+      "rgb": "rgb(255, 0, 0)",
+      "hsl": "hsl(0, 100%, 50%)"
+    },
+    "backgrounds": {
+      "background_color": "background-color: yellow;",
+      "background_image": "background-image: url('image.jpg');",
+      "background_repeat": "background-repeat: no-repeat;",
+      "background_size": "background-size: cover;"
+    }
+  },
+  "pseudo_classes_and_elements": {
+    "pseudo_classes": {
+      "hover": "a:hover { color: orange; }",
+      "active": "a:active { color: green; }"
+    },
+    "pseudo_elements": {
+      "first_line": "p::first-line { font-weight: bold; }",
+      "before_after": "h1::before { content: '★ '; }"
+    }
+  },
+  "responsive_design": {
+    "media_queries": {
+      "example": "@media (max-width: 600px) { body { background-color: lightgray; } }"
+    }
+  },
+  "intermediate_topics": {
+    "transitions": {
+      "description": "Animate property changes.",
+      "example": {
+        "code": "div { transition: all 0.5s ease; } div:hover { transform: scale(1.2); }"
+      }
+    },
+    "grid_layout": {
+      "description": "A two-dimensional layout system.",
+      "example": {
+        "code": ".container { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }"
+      }
+    },
+    "z_index": {
+      "description": "Controls stacking order of elements.",
+      "example": {
+        "code": "div { position: absolute; z-index: 10; }"
+      }
+    }
+  }
+}

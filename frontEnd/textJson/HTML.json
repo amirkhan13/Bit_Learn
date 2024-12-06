@@ -1,0 +1,102 @@
+{
+  "HTML_Tutorial": {
+    "Introduction": "HTML (HyperText Markup Language) is the standard language for creating web pages. It uses a system of tags to define the structure and layout of a webpage.",
+    "1_Basic_Structure_of_HTML_Document": {
+      "Code": "<!DOCTYPE html>\n<html>\n  <head>\n    <title>Page Title</title>\n  </head>\n  <body>\n    <h1>Welcome to HTML</h1>\n    <p>This is a paragraph.</p>\n  </body>\n</html>",
+      "Explanation": {
+        "DOCTYPE": "Declares the document as HTML5.",
+        "html": "Root element of the HTML document.",
+        "head": "Contains metadata (e.g., <title> for the page title).",
+        "body": "Contains the visible content of the webpage."
+      }
+    },
+    "2_Common_HTML_Tags": {
+      "Headings": {
+        "Code": "<h1>Main Heading</h1>\n<h2>Sub-heading</h2>\n<h3>Smaller sub-heading</h3>"
+      },
+      "Paragraphs": {
+        "Code": "<p>This is a paragraph of text.</p>"
+      },
+      "Links": {
+        "Code": "<a href=\"https://www.google.com\">Visit Google</a>"
+      },
+      "Images": {
+        "Code": "<img src=\"image.jpg\" alt=\"Description of image\" width=\"300\">",
+        "Attributes": {
+          "src": "Path to the image.",
+          "alt": "Description for accessibility.",
+          "width": "Sets the width of the image."
+        }
+      },
+      "Lists": {
+        "Unordered_List": {
+          "Code": "<ul>\n  <li>Item 1</li>\n  <li>Item 2</li>\n  <li>Item 3</li>\n</ul>"
+        },
+        "Ordered_List": {
+          "Code": "<ol>\n  <li>Step 1</li>\n  <li>Step 2</li>\n  <li>Step 3</li>\n</ol>"
+        }
+      }
+    },
+    "3_Attributes": {
+      "Explanation": "Attributes provide additional information about elements and are always written in the format name=\"value\".",
+      "Example": "<a href=\"https://example.com\" target=\"_blank\">Open in New Tab</a>",
+      "Details": {
+        "href": "Specifies the URL.",
+        "target": "Opens the link in a new tab."
+      }
+    },
+    "4_HTML_Forms": {
+      "Code": "<form action=\"/submit\" method=\"post\">\n  <label for=\"name\">Name:</label>\n  <input type=\"text\" id=\"name\" name=\"name\">\n  \n  <label for=\"email\">Email:</label>\n  <input type=\"email\" id=\"email\" name=\"email\">\n\n  <input type=\"submit\" value=\"Submit\">\n</form>",
+      "Explanation": {
+        "form": "The container for form elements.",
+        "action": "URL to send the form data.",
+        "method": "HTTP method (GET or POST).",
+        "input": "Input field (e.g., text, email, submit)."
+      }
+    },
+    "5_HTML_Tables": {
+      "Code": "<table border=\"1\">\n  <tr>\n    <th>Name</th>\n    <th>Age</th>\n  </tr>\n  <tr>\n    <td>John</td>\n    <td>30</td>\n  </tr>\n  <tr>\n    <td>Jane</td>\n    <td>25</td>\n  </tr>\n</table>",
+      "Explanation": {
+        "table": "Creates a table.",
+        "tr": "Table row.",
+        "th": "Table header.",
+        "td": "Table cell."
+      }
+    },
+    "6_HTML_Semantic_Elements": {
+      "Explanation": "Semantic elements clearly define the purpose of the content.",
+      "Examples": {
+        "header": "Defines the page header.",
+        "footer": "Defines the page footer.",
+        "article": "Represents an independent piece of content.",
+        "section": "Groups related content."
+      },
+      "Code": "<header>\n  <h1>Website Title</h1>\n</header>\n<section>\n  <h2>About Us</h2>\n  <p>We provide great services.</p>\n</section>\n<footer>\n  <p>&copy; 2024 Company Name</p>\n</footer>"
+    },
+    "7_Multimedia_in_HTML": {
+      "Adding_Videos": {
+        "Code": "<video width=\"320\" height=\"240\" controls>\n  <source src=\"video.mp4\" type=\"video/mp4\">\n  Your browser does not support the video tag.\n</video>"
+      },
+      "Adding_Audio": {
+        "Code": "<audio controls>\n  <source src=\"audio.mp3\" type=\"audio/mpeg\">\n  Your browser does not support the audio element.\n</audio>"
+      }
+    },
+    "8_HTML_Comments": {
+      "Explanation": "Comments are ignored by the browser and used for documentation.",
+      "Code": "<!-- This is a comment -->"
+    },
+    "9_Intermediate_Concepts": {
+      "HTML_Entities": {
+        "Code": "<p>&lt; for <, &gt; for >, &amp; for &</p>"
+      },
+      "Forms_with_Dropdowns_Checkboxes_Radio_Buttons": {
+        "Code": "<form>\n  <label for=\"gender\">Gender:</label><br>\n  <input type=\"radio\" id=\"male\" name=\"gender\" value=\"male\"> Male<br>\n  <input type=\"radio\" id=\"female\" name=\"gender\" value=\"female\"> Female<br>\n  \n  <label for=\"hobbies\">Hobbies:</label><br>\n  <input type=\"checkbox\" id=\"reading\" name=\"hobby\" value=\"reading\"> Reading<br>\n  <input type=\"checkbox\" id=\"traveling\" name=\"hobby\" value=\"traveling\"> Traveling<br>\n  \n  <label for=\"country\">Country:</label>\n  <select id=\"country\" name=\"country\">\n    <option value=\"usa\">USA</option>\n    <option value=\"canada\">Canada</option>\n    <option value=\"uk\">UK</option>\n  </select><br>\n  \n  <input type=\"submit\" value=\"Submit\">\n</form>"
+      }
+    },
+    "10_Practice_Tips": [
+      "Write HTML code in a simple text editor or an IDE like VS Code.",
+      "Use indents to organize nested elements.",
+      "Experiment with different tags and attributes."
+    ]
+  }
+}

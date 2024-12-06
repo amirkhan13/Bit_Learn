@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video-Based Tutorials | BitLearn</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #F9FAFB;
+            color: #333;
+        }
+
+        header {
+            background-color: #4F46E5; /* Indigo header */
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 2.5em;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            width: 100%;
+            margin-top: 30px;
+        }
+
+        .video-card {
+            background-color: white;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .video-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .video-card .card-content {
+            padding: 15px;
+        }
+
+        .video-card h3 {
+            color: #4F46E5;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        .video-card p {
+            color: #4B5563;
+            font-size: 1em;
+            margin-bottom: 15px;
+        }
+
+        .video-card span {
+            font-size: 0.9em;
+            color: #7C3AED;
+        }
+
+        .video-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .video-card:hover img {
+            opacity: 0.9;
+        }
+
+        footer {
+            background-color: #1F2937; /* Dark footer */
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 40px;
+        }
+
+        .cta-button {
+            background-color: #4F46E5;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 5px;
+            font-size: 1.1em;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        .cta-button:hover {
+            background-color: #4338CA;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>BitLearn Video Tutorials</h1>
+        <p>Explore a world of video tutorials on programming and technology</p>
+    </header>
+    <div class="container">
+        <h2>Featured Video Courses</h2>
+        <p>Get started with these handpicked courses to master programming languages, frameworks, and more!</p>
+
+        <div class="video-grid">
+            <!-- Video Course 1 -->
+            <div class="video-card" onclick="window.location.href='video-course-1.html'">
+                <img src="https://via.placeholder.com/800x450?text=JavaScript+Course" alt="JavaScript Course">
+                <div class="card-content">
+                    <h3>Master JavaScript: From Beginner to Pro</h3>
+                    <p>This course covers the basics and advanced concepts of JavaScript, perfect for beginners.</p>
+                    <span>30 lessons | 5 hours</span>
+                </div>
+            </div>
+
+            <!-- Video Course 2 -->
+            <div class="video-card" onclick="window.location.href='video-course-2.html'">
+                <img src="https://via.placeholder.com/800x450?text=Python+Programming" alt="Python Programming">
+                <div class="card-content">
+                    <h3>Python Programming: A Complete Guide</h3>
+                    <p>Learn Python, from syntax to data analysis, and start building real-world applications.</p>
+                    <span>25 lessons | 4.5 hours</span>
+                </div>
+            </div>
+
+            <!-- Video Course 3 -->
+            <div class="video-card" onclick="window.location.href='video-course-3.html'">
+                <img src="https://via.placeholder.com/800x450?text=HTML+%26+CSS+Mastery" alt="HTML & CSS Mastery">
+                <div class="card-content">
+                    <h3>HTML & CSS Mastery</h3>
+                    <p>Become an expert in web design and build responsive websites using HTML and CSS.</p>
+                    <span>20 lessons | 3 hours</span>
+                </div>
+            </div>
+
+            <!-- Video Course 4 -->
+            <div class="video-card" onclick="window.location.href='video-course-4.html'">
+                <img src="https://via.placeholder.com/800x450?text=React+JS+Course" alt="React JS Course">
+                <div class="card-content">
+                    <h3>React JS: From Basics to Advanced</h3>
+                    <p>Master React.js, a popular JavaScript library for building dynamic and interactive web applications.</p>
+                    <span>40 lessons | 6 hours</span>
+                </div>
+            </div>
+        </div>
+
+        <a href="#" class="cta-button">Browse All Video Courses</a>
+    </div>
+
+    <footer>
+        &copy; 2024 BitLearn. All rights reserved.
+    </footer>
+</body>
+</html>

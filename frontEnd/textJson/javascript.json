@@ -1,0 +1,102 @@
+{
+  "JavaScript": {
+    "1. Introduction": {
+      "description": "JavaScript is a programming language that enables dynamic behavior on websites.",
+      "features": [
+        "Runs in the browser",
+        "Can interact with HTML and CSS",
+        "Works on almost every device"
+      ],
+      "examples": [
+        "Form validation",
+        "Creating sliders, modals, and popups",
+        "Sending requests to servers (AJAX/Fetch)"
+      ]
+    },
+    "2. Setting Up Your Environment": {
+      "tools": [
+        "Browser Console (DevTools - F12)",
+        "Editor like VS Code"
+      ],
+      "fileStructure": [
+        "index.html",
+        "script.js (linked via <script src='script.js'></script>)"
+      ]
+    },
+    "3. Basics of JavaScript": {
+      "syntax": "End statements with a semicolon (;), JavaScript is case-sensitive.",
+      "variables": {
+        "let": "Modern variable declaration",
+        "const": "Cannot be reassigned",
+        "var": "Older style"
+      },
+      "dataTypes": [
+        "String (e.g., 'Hello')",
+        "Number (e.g., 123, 3.14)",
+        "Boolean (true/false)",
+        "Undefined",
+        "Null"
+      ],
+      "operators": {
+        "arithmetic": ["+", "-", "*", "/", "%"],
+        "comparison": ["==", "===", "!=", ">", "<", ">=", "<="],
+        "logical": ["&&", "||", "!"]
+      }
+    },
+    "4. Control Structures": {
+      "ifElse": {
+        "syntax": "if (condition) { ... } else { ... }",
+        "example": "if (age > 18) { console.log('You are an adult.'); }"
+      },
+      "switchCase": {
+        "syntax": "switch (value) { case 1: ...; break; default: ... }",
+        "example": "switch (day) { case 1: console.log('Monday'); break; }"
+      },
+      "loops": {
+        "for": "for (let i = 0; i < 5; i++) { console.log(i); }",
+        "while": "let i = 0; while (i < 5) { console.log(i); i++; }"
+      }
+    },
+    "5. Functions": {
+      "definition": "Reusable blocks of code.",
+      "example": "function greet(name) { return `Hello, ${name}`; }"
+    },
+    "6. Objects and Arrays": {
+      "arrays": {
+        "example": "let fruits = ['Apple', 'Banana']; console.log(fruits[0]);"
+      },
+      "objects": {
+        "example": "let person = { name: 'Alice', age: 25 }; console.log(person.name);"
+      }
+    },
+    "7. DOM Manipulation": {
+      "selectingElements": {
+        "example": "const heading = document.getElementById('title');"
+      },
+      "changingContent": {
+        "example": "heading.textContent = 'New Title';"
+      },
+      "eventListeners": {
+        "example": "button.addEventListener('click', () => { alert('Button clicked!'); });"
+      }
+    },
+    "8. Intermediate Topics": {
+      "ES6Features": {
+        "templateLiterals": "console.log(`Hello, ${name}`);",
+        "arrowFunctions": "const greet = (name) => `Hello, ${name}`;"
+      },
+      "promises": {
+        "example": "fetch('https://api.example.com/data').then(response => response.json()).then(data => console.log(data)).catch(error => console.error(error));"
+      },
+      "modules": {
+        "export": "export const greet = () => console.log('Hello');",
+        "import": "import { greet } from './export.js'; greet();"
+      }
+    },
+    "Practice Ideas": [
+      "Build a simple calculator",
+      "Create a to-do list with dynamic item addition/removal",
+      "Build a weather app using an API"
+    ]
+  }
+}
