@@ -1,0 +1,15 @@
+{
+  "name": "bit",
+  "version": "1.0.0",
+  "description": "{BiT}.learn; is an online learning platform tailored for coders and IT enthusiasts. It offers both text-based and video-based content for learning a variety of programming and technical topics. The platform caters to both teachers and students, enabling interactive and personalized learning experiences.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node ./backEnd/server/server.js"
+  },
+  "author": "Zaid And Amir",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.2",
+    "mongoose": "^8.8.4"
+  }
+}
