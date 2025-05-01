@@ -52,7 +52,7 @@ Can I track my progress on this platform? Yes, the platform tracks your learning
 What should I do if I get stuck? If you're stuck, simply ask the assistant for help, and it will guide you through troubleshooting or explain the concept in more detail.
 `;
 
-const API_KEY = 'AIzaSyCnJO2SQ65rWLMFMv4zu69PfFEKkAgOa0s';
+const API_KEY = '';
 
 const genAI = new GoogleGenerativeAI(API_KEY);
 const model = genAI.getGenerativeModel({
