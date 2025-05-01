@@ -1,0 +1,181 @@
+{
+  "Introduction to Python": {
+    "What is Python": "Python is a high-level, interpreted programming language known for its simplicity and versatility. It's widely used for web development, data analysis, machine learning, and automation. Python emphasizes readability with an easy-to-understand syntax.",
+    "1_Setting_Up_Python": {
+      "Installation": [
+        "Download Python from python.org.",
+        "During installation, check 'Add Python to PATH' to access Python from the command line.",
+        "Verify installation using 'python --version' in the terminal."
+      ],
+      "Running_Code": {
+        "Interactive_Mode": "Open a terminal and type 'python' to write Python code line by line.",
+        "Script_Mode": "Save the code in a .py file and run it using 'python filename.py'."
+      }
+    },
+    "2_Basic_Syntax": {
+      "Hello_World": {
+        "Code": "print('Hello, World!')",
+        "Explanation": "The 'print()' function displays output to the console. Strings are enclosed in double or single quotes."
+      },
+      "Comments": {
+        "Code": "# This is a single-line comment\n# Comments help explain the code and are ignored by the interpreter.",
+        "Explanation": "Use '#' to add single-line comments."
+      }
+    },
+    "3_Variables_and_Data_Types": {
+      "Variables": {
+        "Code": "name = 'Alice'\nage = 25\nheight = 5.5\nis_student = True",
+        "Explanation": "Variables store data values. The data type is determined automatically."
+      },
+      "Data_Types": {
+        "String": "Text data like 'hello' or 'world'.",
+        "Integer": "Whole numbers like 10, -5.",
+        "Float": "Decimal numbers like 3.14, -0.1.",
+        "Boolean": "True or False."
+      },
+      "Type_Checking": {
+        "Code": "print(type(name))",
+        "Explanation": "Displays the type of the variable."
+      },
+      "Casting": {
+        "Code": "x = 5.5\nprint(int(x)) # Casting float to integer",
+        "Explanation": "Use 'int()' to convert a float to an integer, and 'str()' to convert a value to a string."
+      }
+    },
+    "4_Input_and_Output": {
+      "Getting_Input": {
+        "Code": "name = input('Enter your name: ')\nprint('Hello, ' + name + '!')",
+        "Explanation": "The input() function gets user input as a string."
+      },
+      "Output_Formatting": {
+        "Code": "age = 25\nprint(f'I am {age} years old.')",
+        "Explanation": "F-strings format output with variables."
+      },
+      "Formatted_String_Method": {
+        "Code": "name = 'Alice'\nage = 25\nprint('My name is {} and I am {} years old.'.format(name, age))",
+        "Explanation": "Use the 'format()' method to insert variables into a string."
+      }
+    },
+    "5_Control_Flow": {
+      "If_Else_Statements": {
+        "Code": "age = 18\nif age >= 18:\n    print('You are an adult.')\nelse:\n    print('You are a minor.')",
+        "Explanation": "If-else statements conditionally execute blocks of code."
+      },
+      "Loops": {
+        "For_Loop": {
+          "Code": "for i in range(5):\n    print(i)",
+          "Explanation": "The for loop iterates over a sequence of values."
+        },
+        "While_Loop": {
+          "Code": "count = 0\nwhile count < 5:\n    print(count)\n    count += 1",
+          "Explanation": "The while loop continues as long as the condition is true."
+        },
+        "Nested_Loops": {
+          "Code": "for i in range(3):\n    for j in range(2):\n        print(f'({i},{j})')",
+          "Explanation": "Nested loops are loops within loops, used for more complex iteration."
+        }
+      }
+    },
+    "6_Functions": {
+      "Defining_Functions": {
+        "Code": "def greet(name):\n    return f'Hello, {name}!'\nprint(greet('Alice'))",
+        "Explanation": "Functions are reusable blocks of code. 'def' defines a function, and 'return' sends back a value."
+      },
+      "Arguments_and_Return_Values": {
+        "Code": "def add(a, b):\n    return a + b\nresult = add(3, 4)\nprint(result)",
+        "Explanation": "Functions can accept parameters and return values."
+      }
+    },
+    "7_Data_Structures": {
+      "Lists": {
+        "Code": "fruits = ['apple', 'banana', 'cherry']\nprint(fruits[0])",
+        "Explanation": "Lists store ordered collections of items. Use indices to access elements."
+      },
+      "Tuples": {
+        "Code": "coordinates = (10, 20)",
+        "Explanation": "Tuples are immutable lists, meaning their contents cannot be changed after creation."
+      },
+      "Dictionaries": {
+        "Code": "person = {'name': 'Alice', 'age': 25}\nprint(person['name'])",
+        "Explanation": "Dictionaries store key-value pairs."
+      },
+      "Sets": {
+        "Code": "numbers = {1, 2, 3, 3}\nprint(numbers)",
+        "Explanation": "Sets store unordered collections of unique items."
+      },
+      "List_Operations": {
+        "Code": "numbers = [1, 2, 3]\nnumbers.append(4)\nprint(numbers)",
+        "Explanation": "Lists are mutable and support various operations like append, remove, and insert."
+      }
+    },
+    "8_File_Handling": {
+      "Reading_Files": {
+        "Code": "with open('file.txt', 'r') as file:\n    content = file.read()\n    print(content)",
+        "Explanation": "Use 'open()' to open files, and 'with' ensures the file is properly closed after use."
+      },
+      "Writing_to_Files": {
+        "Code": "with open('file.txt', 'w') as file:\n    file.write('Hello, World!')",
+        "Explanation": "Open a file in 'write' mode ('w') to modify its contents."
+      },
+      "File_Append": {
+        "Code": "with open('file.txt', 'a') as file:\n    file.write('Appending text!')",
+        "Explanation": "Use 'a' mode to append content to an existing file."
+      }
+    },
+    "9_Object_Oriented_Programming": {
+      "Classes_and_Objects": {
+        "Code": "class Person:\n    def __init__(self, name, age):\n        self.name = name\n        self.age = age\n    def greet(self):\n        return f'Hi, I\\'m {self.name}.'\np = Person('Alice', 25)\nprint(p.greet())",
+        "Explanation": "Classes define the blueprint for objects. '__init__' is the constructor, and 'self' refers to the current instance."
+      },
+      "Inheritance": {
+        "Code": "class Animal:\n    def __init__(self, name):\n        self.name = name\n    def speak(self):\n        return 'Animal sounds'\n\nclass Dog(Animal):\n    def speak(self):\n        return 'Woof!'\n\ndog = Dog('Rex')\nprint(dog.speak())",
+        "Explanation": "Inheritance allows a class to inherit methods and attributes from another class."
+      }
+    },
+    "10_Modules_and_Libraries": {
+      "Importing_Modules": {
+        "Code": "import math\nprint(math.sqrt(16))",
+        "Explanation": "Modules are reusable code blocks. Use 'import' to bring them into your script."
+      },
+      "Installing_Libraries": {
+        "Command": "pip install requests",
+        "Explanation": "Use 'pip' to install external libraries from the Python Package Index (PyPI)."
+      },
+      "Using_External_Libraries": {
+        "Code": "import requests\nresponse = requests.get('https://api.github.com')\nprint(response.status_code)",
+        "Explanation": "You can use 'requests' to interact with APIs and send HTTP requests."
+      }
+    },
+    "11_Error_Handling": {
+      "Try_Except_Block": {
+        "Code": "try:\n    result = 10 / 0\nexcept ZeroDivisionError:\n    print('Cannot divide by zero!')",
+        "Explanation": "Use 'try-except' to handle exceptions and avoid crashes in your code."
+      },
+      "Else_and_Finally": {
+        "Code": "try:\n    x = 5 / 0\nexcept ZeroDivisionError:\n    print('Error!')\nelse:\n    print('No errors')\nfinally:\n    print('Execution complete')",
+        "Explanation": "'else' runs if no exception occurs, and 'finally' runs no matter what."
+      }
+    },
+    "12_Intermediate_Topics": {
+      "List_Comprehensions": {
+        "Code": "squares = [x**2 for x in range(5)]\nprint(squares)",
+        "Explanation": "List comprehensions provide a concise way to create lists."
+      },
+      "Lambda_Functions": {
+        "Code": "add = lambda x, y: x + y\nprint(add(5, 3))",
+        "Explanation": "Lambda functions are anonymous functions defined with 'lambda'."
+      },
+      "Decorators": {
+        "Code": "def decorator(func):\n    def wrapper():\n        print('Before function call')\n        func()\n        print('After function call')\n    return wrapper\n\n@decorator\ndef say_hello():\n    print('Hello!')\nsay_hello()",
+        "Explanation": "Decorators modify the behavior of functions or methods."
+      }
+    },
+    "13_Practice_Projects": [
+      "Number Guessing Game: A game where the user guesses a random number.",
+      "To-Do List App: A simple CLI app to manage tasks.",
+      "Calculator: A basic calculator for arithmetic operations.",
+      "Temperature Converter: A program to convert temperatures between Celsius, Fahrenheit, and Kelvin.",
+      "Tic-Tac-Toe Game: A classic 2-player game for the terminal."
+    ]
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "Introduction to HTML": {
+    "HTML": "HTML (HyperText Markup Language) is the standard language for creating web pages. It uses a system of tags to define the structure and layout of a webpage. HTML provides the foundation for web development, allowing developers to structure text, images, links, multimedia, and more.",
+    "1_Basic_Structure_of_HTML_Document": {
+      "Code": "<!DOCTYPE html>\n<html>\n  <head>\n    <title>Page Title</title>\n  </head>\n  <body>\n    <h1>Welcome to HTML</h1>\n    <p>This is a paragraph.</p>\n  </body>\n</html>",
+      "Explanation": {
+        "DOCTYPE": "Declares the document as HTML5, ensuring compatibility with modern browsers and standards.",
+        "html": "The root element of the HTML document that encompasses all other elements.",
+        "head": "Contains metadata, links to stylesheets, scripts, and other resources that do not appear directly on the webpage.",
+        "body": "Contains the visible content of the webpage, such as text, images, and interactive elements."
+      }
+    },
+    "2_Common_HTML_Tags": {
+      "Headings": {
+        "Code": "<h1>Main Heading</h1>\n<h2>Sub-heading</h2>\n<h3>Smaller sub-heading</h3>",
+        "Explanation": "Headings are used to define the hierarchy and structure of content. They range from <h1> (highest level) to <h6> (lowest level)."
+      },
+      "Paragraphs": {
+        "Code": "<p>This is a paragraph of text.</p>",
+        "Explanation": "Paragraph tags are used to structure text into blocks for better readability."
+      },
+      "Links": {
+        "Code": "<a href=\"https://www.google.com\">Visit Google</a>",
+        "Explanation": "Anchor tags (<a>) create hyperlinks, allowing navigation to other web pages or resources."
+      },
+      "Images": {
+        "Code": "<img src=\"image.jpg\" alt=\"Description of image\" width=\"300\">",
+        "Attributes": {
+          "src": "Specifies the path to the image file.",
+          "alt": "Provides alternative text for accessibility and in case the image fails to load.",
+          "width": "Defines the width of the image in pixels or percentage."
+        }
+      },
+      "Lists": {
+        "Unordered_List": {
+          "Code": "<ul>\n  <li>Item 1</li>\n  <li>Item 2</li>\n  <li>Item 3</li>\n</ul>",
+          "Explanation": "Unordered lists are used to group items without implying a specific order. Items are typically displayed with bullet points."
+        },
+        "Ordered_List": {
+          "Code": "<ol>\n  <li>Step 1</li>\n  <li>Step 2</li>\n  <li>Step 3</li>\n</ol>",
+          "Explanation": "Ordered lists are used to present items in a sequence, often numbered or alphabetized."
+        }
+      }
+    },
+    "3_Attributes": {
+      "Explanation": "Attributes provide additional information about HTML elements. They are specified inside the opening tag and follow a name=\"value\" format. Attributes enhance the behavior and functionality of elements.",
+      "Example": "<a href=\"https://example.com\" target=\"_blank\">Open in New Tab</a>",
+      "Details": {
+        "href": "Specifies the URL the link points to.",
+        "target": "Determines where to open the linked document. _blank opens it in a new tab or window."
+      }
+    },
+    "4_HTML_Forms": {
+      "Code": "<form action=\"/submit\" method=\"post\">\n  <label for=\"name\">Name:</label>\n  <input type=\"text\" id=\"name\" name=\"name\">\n  \n  <label for=\"email\">Email:</label>\n  <input type=\"email\" id=\"email\" name=\"email\">\n\n  <input type=\"submit\" value=\"Submit\">\n</form>",
+      "Explanation": {
+        "form": "The container for all form elements, used to collect user input.",
+        "action": "Specifies the URL where form data should be submitted.",
+        "method": "Defines the HTTP method (GET or POST) used to send data.",
+        "input": "Represents a field for user input. It can have various types such as text, email, password, or submit."
+      }
+    },
+    "5_HTML_Tables": {
+      "Code": "<table border=\"1\">\n  <tr>\n    <th>Name</th>\n    <th>Age</th>\n  </tr>\n  <tr>\n    <td>John</td>\n    <td>30</td>\n  </tr>\n  <tr>\n    <td>Jane</td>\n    <td>25</td>\n  </tr>\n</table>",
+      "Explanation": {
+        "table": "Creates a table to organize data into rows and columns.",
+        "tr": "Defines a table row.",
+        "th": "Represents a header cell in a table.",
+        "td": "Represents a standard data cell in a table."
+      }
+    },
+    "6_HTML_Semantic_Elements": {
+      "Explanation": "Semantic elements convey the meaning of the content within the tags. These elements improve accessibility, SEO, and readability for developers.",
+      "Examples": {
+        "header": "Defines the header section of a page, often containing logos or navigation links.",
+        "footer": "Defines the footer section of a page, often containing copyright or contact information.",
+        "article": "Represents a self-contained piece of content, such as a blog post or news article.",
+        "section": "Groups related content, such as a chapter or section of a document."
+      },
+      "Code": "<header>\n  <h1>Website Title</h1>\n</header>\n<section>\n  <h2>About Us</h2>\n  <p>We provide great services.</p>\n</section>\n<footer>\n  <p>&copy; 2024 Company Name</p>\n</footer>"
+    },
+    "7_Multimedia_in_HTML": {
+      "Adding_Videos": {
+        "Code": "<video width=\"320\" height=\"240\" controls>\n  <source src=\"video.mp4\" type=\"video/mp4\">\n  Your browser does not support the video tag.\n</video>",
+        "Explanation": "The <video> tag embeds a video player in the webpage. The <source> tag specifies the video file and format."
+      },
+      "Adding_Audio": {
+        "Code": "<audio controls>\n  <source src=\"audio.mp3\" type=\"audio/mpeg\">\n  Your browser does not support the audio element.\n</audio>",
+        "Explanation": "The <audio> tag embeds an audio player in the webpage. The <source> tag specifies the audio file and format."
+      }
+    },
+    "8_HTML_Comments": {
+      "Explanation": "Comments in HTML are used to include notes or documentation for developers. They are not displayed on the webpage.",
+      "Code": "<!-- This is a comment -->"
+    },
+    "9_Intermediate_Concepts": {
+      "HTML_Entities": {
+        "Code": "<p>&lt; for <, &gt; for >, &amp; for &</p>",
+        "Explanation": "HTML entities are used to display reserved characters or symbols that would otherwise be interpreted as code."
+      },
+      "Forms_with_Dropdowns_Checkboxes_Radio_Buttons": {
+        "Code": "<form>\n  <label for=\"gender\">Gender:</label><br>\n  <input type=\"radio\" id=\"male\" name=\"gender\" value=\"male\"> Male<br>\n  <input type=\"radio\" id=\"female\" name=\"gender\" value=\"female\"> Female<br>\n  \n  <label for=\"hobbies\">Hobbies:</label><br>\n  <input type=\"checkbox\" id=\"reading\" name=\"hobby\" value=\"reading\"> Reading<br>\n  <input type=\"checkbox\" id=\"traveling\" name=\"hobby\" value=\"traveling\"> Traveling<br>\n  \n  <label for=\"country\">Country:</label>\n  <select id=\"country\" name=\"country\">\n    <option value=\"usa\">USA</option>\n    <option value=\"canada\">Canada</option>\n    <option value=\"uk\">UK</option>\n  </select><br>\n  \n  <input type=\"submit\" value=\"Submit\">\n</form>",
+        "Explanation": "Combining radio buttons, checkboxes, and dropdowns allows the creation of diverse form inputs for user interaction."
+      }
+    },
+    "10_Practice_Tips": [
+      "Write HTML code in a simple text editor or an IDE like VS Code for syntax highlighting and auto-completion.",
+      "Use proper indentation to organize nested elements and enhance readability.",
+      "Experiment with various tags, attributes, and properties to build versatile web pages.",
+      "Regularly validate your HTML using tools like the W3C Markup Validation Service to ensure compliance with standards."
+    ]
+  }
+}

@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up | BitLearn</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
     <style>
-
         * {
             margin: 0;
             padding: 0;
@@ -15,17 +17,13 @@
         body {
             font-family: 'Arial', sans-serif;
             background: linear-gradient(135deg, #00203f, #003c58);
-            /* display: flex; */
-            /* justify-content: center; */
-            /* align-items: center; */
-            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
             animation: fadeIn 1s ease-out;
-            overflow-x: hidden;
         }
-        body::-webkit-scrollbar {
-            display: none; 
-        }
-        
+
         @keyframes fadeIn {
             0% {
                 opacity: 0;
@@ -34,52 +32,8 @@
                 opacity: 1;
             }
         }
-        header {
-    background: rgba(0, 0, 0, 0.3);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
-    position: sticky;
-    top: 0;
-    z-index: 1;
-    backdrop-filter: blur(10px);
-}
+        
 
-nav {
-    display: flex;
-    gap: 20px;
-}
-
-a {
-    color: #f5f3ef;
-    text-decoration: none;
-    transition: color 0.3s;
-   
-}
-
-a:hover {
-    color: #40c9c9;
-}
-
-.logo span {
-    color: #ffb400;
-}
-
-.logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: white;
-    text-shadow: 0 0 6px #40c9c9;
-}
-        .holder{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
         .signup-container {
             background: rgba(24, 70, 129, 0.637);
             box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
@@ -88,6 +42,11 @@ a:hover {
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
             animation: slideIn 0.5s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+         
         }
 
         @keyframes slideIn {
@@ -107,17 +66,20 @@ a:hover {
             color: #ffb400;
         }
 
+        input[type="text"],
         input[type="email"],
         input[type="password"] {
+            background-color: white;
             width: 100%;
             padding: 12px;
             margin: 10px 0;
-            border: 1px solid #ddd;
+           
             border-radius: 5px;
             font-size: 1em;
             transition: 0.3s;
         }
 
+        input[type="text"]:focus,
         input[type="email"]:focus,
         input[type="password"]:focus {
             border-color: #525301;
@@ -138,12 +100,13 @@ a:hover {
 
         .submit-btn:hover {
             background-color: #ffbf2a;
+            border-radius: 15px;
         }
 
         .redirect {
-            color: #ffb400;
             text-align: center;
             margin-top: 15px;
+            color: #ffb400;
         }
 
         .redirect a {
@@ -156,61 +119,47 @@ a:hover {
             color: #ffb400;
         }
 
- 
-        .alert {
-            color: white;
-            background-color: #ffb400;
-            padding: 10px;
-            margin-bottom: 10px;
-            border-radius: 5px;
-            text-align: center;
+        .role-select {
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-around;
         }
+
+        .role-select button {
+            background-color: #ffb400;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1.1em;
+            cursor: pointer;
+            width: 45%;
+            transition: 0.3s;
+        }
+
         .role-select button:hover {
             background-color: #eaed3a;
-        }
-        footer {
-        text-align: center;
-        padding: 10px;
-        color: antiquewhite;
-        background: rgba(255, 255, 255, 0.05);
-        margin-top: auto;
         }
     </style>
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <a style="text-decoration: none; " href="index.html">
-                <span>{</span>BiT<span>}</span>.learn<span>;</span>
-            </a>
-        </div>
-    </header>
-    <div class="holder">
-        <div class="signup-container">
-            <h2>Create Your Account</h2>
-    
-    
-            <% if (typeof error !== 'undefined') { %>
-                <div class="alert">
-                    <%= error %>
-                </div>
-            <% } %>
-    
-            <form id="signup-form" action="/signup" method="post">
-                <input type="email" id="email" name="email" placeholder="Enter Email" required>
-                <input type="password" id="password" name="password" placeholder="Create Password" required>
-                <button type="submit" class="submit-btn">Sign Up</button>
-            </form>
-    
-            <div class="redirect">
-                <p>Already have an account? <a href="/login">Login</a></p>
-            </div>
+   
+    <div class="signup-container">
+        <h2>Create Your Account</h2>
+
+       
+
+        <form action="signup-action.php" method="POST">
+            <input type="text" name="username" placeholder="Enter Full Name" required>
+            <input type="email" name="email" placeholder="Enter Email" required>
+            <input type="password" name="password" placeholder="Create Password" required>
+            <input type="password" name="Confirmpassword" placeholder="Confirm Password" required>
+            <button type="submit" class="submit-btn">Sign Up</button>
+        </form>
+
+        <div class="redirect">
+            <p>Already have an account? <a href="login.html">Login</a></p>
         </div>
     </div>
-    <footer>
-        <p>&copy; 2024 BitLearn. All rights reserved.</p>
-    </footer>
-    
-
 </body>
 </html>

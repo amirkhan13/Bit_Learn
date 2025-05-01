@@ -4,8 +4,439 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Roadmaps</title>
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(135deg, #00203f, #003c58);
+            font-family: "Share Tech Mono", monospace;
+            overflow-x: hidden;
+            
+        }
+
+        body::-webkit-scrollbar {
+            display: none; 
+        }
+
+        header {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 16px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1;
+            backdrop-filter: blur(10px);
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        a {
+            color: #f5f3ef;
+            text-decoration: none;
+            transition: color 0.3s;
+        
+        }
+
+        a:hover {
+            color: #40c9c9;
+        }
+
+        .logo span {
+            color: #ffb400;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: white;
+            text-shadow: 0 0 6px #40c9c9;
+        }
+
+        h1 {
+            text-align: center;
+            color: #ffb400;
+            font-size: 2.5rem;
+            margin: 40px 0;
+            padding-top: 28px;
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 100px auto;
+        }
+
+        .container {
+            padding: 10px 50px;
+            position: relative;
+            width: 50%;
+            animation: movedown 1s linear forwards;
+            opacity: 0;
+        }
+
+        @keyframes movedown {
+            0% {
+                opacity: 1;
+                transform: translateY(-30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0px);
+            }
+        }
+
+        .container:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        .container:nth-child(2) {
+            animation-delay: 1s;
+        }
+
+        .container:nth-child(3) {
+            animation-delay: 2s;
+        }
+
+        .container:nth-child(4) {
+            animation-delay: 3s;
+        }
+
+        .container:nth-child(5) {
+            animation-delay: 4s;
+        }
+
+        .container:nth-child(6) {
+            animation-delay: 5s;
+        }
+
+        .container:nth-child(7) {
+            animation-delay: 6s;
+        }
+
+        .container:nth-child(8) {
+            animation-delay: 6s;
+        }
+
+        .text-box {
+            padding: 20px 30px;
+            background: #F4F6FF;
+            position: relative;
+            border-radius: 6px;
+            font-size: 15px;
+        }
+
+        .left-container {
+            left: 0;
+        }
+
+        .right-container {
+            left: 50%;
+        }
+
+        .container img {
+            position: absolute;
+            width: 40px;
+            border-radius: 50%;
+            right: -20px;
+            top: 32px;
+            z-index: 10;
+        }
+
+        .right-container img {
+            left: -20px;
+        }
+
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            height: 100%;
+            background: #ffb400;
+            top: 0;
+            left: 50%;
+            margin-left: -3px;
+            z-index: -1;
+            animation: moveline 6s linear forwards;
+            border-radius: 20px;
+        }
+
+        @keyframes moveline {
+            0% {
+                height: 0;
+            }
+            100% {
+                height: 100%;
+            }
+        }
+
+        .text-box h2 {
+            background: linear-gradient(135deg, #00203f, #003c58);
+            color: #ff9900;
+            font-weight: 600;
+            padding: 8px;
+            border-radius: 10px;
+        }
+
+        .text-box small {
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        .left-container-arrow,
+        .right-container-arrow {
+            height: 0;
+            width: 0;
+            position: absolute;
+            top: 28px;
+            z-index: -1;
+            border-top: 15px solid transparent;
+            border-bottom: 15px solid transparent;
+        }
+
+        .left-container-arrow {
+            border-left: 15px solid #F4F6FF;
+            right: -15px;
+        }
+
+        .right-container-arrow {
+            border-right: 15px solid #F4F6FF;
+            left: -15px;
+        }
+
+        @media screen and (max-width: 600px) {
+            .timeline {
+                margin: 50px auto;
+            }
+
+            .timeline::after {
+                left: 31px;
+            }
+
+            .container {
+                width: 100%;
+                padding-left: 80px;
+                padding-right: 25px;
+                text-align: center;
+            }
+
+            .text-box {
+                font-size: 13px;
+            }
+
+            .text-box small {
+                margin-bottom: 10px;
+            }
+
+            .right-container {
+                left: 0;
+            }
+
+            .left-container img,
+            .right-container img {
+                left: 10px;
+            }
+
+            .left-container-arrow,
+            .right-container-arrow {
+                border-right: 15px solid #F4F6FF;
+                border-left: 0;
+                left: -15px;
+            }
+        }
+        footer {
+        text-align: center;
+        padding: 10px;
+        color: antiquewhite;
+        background: rgba(255, 255, 255, 0.05);
+        margin-top: auto;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to Roadmaps</h1>
+    <header>
+        <div class="logo">
+            <a style="text-decoration: none; " href="index.html">
+                <span>{</span>BiT<span>}</span>.learn<span>;</span>
+            </a>
+        </div>
+        <nav>
+            <a href="./navBar/html/html.html">HTML</a>
+            <a href="./navBar/css/css.html">CSS</a>
+            <a href="./navBar/javascript/javascript.html">JavaScript</a>
+            <a href="./navBar/python/python.html">Python</a>
+            <a href="./navBar/php/php.html">PHP</a>
+            <a href="./navBar/cpp/cpp.html">C++</a>
+            <a href="./navBar/java/java.html">Java</a>
+            <a href="./navBar/dsa/dsa.html">DSA</a>
+        </nav>
+        <div class="rightnav">
+            <!-- <a href="/signup" style=" margin-right:10px;">Roadmaps</a> -->
+            <a href="videoComponent.html">VideoTutorials</a>
+        </div>
+    </header>
+    <h1>Structured Paths for Your Learning;</h1>
+    <div class="timeline">
+        <div class="container left-container">
+            <img src="/img/dsa.png" alt="">
+            <div class="text-box">
+                <h2>Data Structures & Algorithms</h2>
+                <small>    Time: 3-4 months</small>
+                <p>Data Structures and Algorithms (DSA) is the backbone of programming, focusing on the study of structures that hold data and the algorithms that process it. It includes:
+                    <ul>
+                        <li>Arrays, Linked Lists, Stacks, Queues</li>
+                        <li>Trees, Graphs, Hashing</li>
+                        <li>Sorting and Searching Algorithms</li>
+                        <li>Dynamic Programming</li>
+                        <li>Greedy Algorithms</li>
+                        <li>Backtracking</li>
+                    </ul>
+                    Understanding these concepts is critical for problem-solving in competitive programming.
+                </p>
+                <span class="left-container-arrow"></span>
+            </div>
+        </div>
+        <div class="container right-container">
+            <img src="/img/cpp.svg" alt="">
+            <div class="text-box">
+                <h2>C++</h2>
+                <small>Time: 2 months</small>
+                <p>C++ is a powerful language that is commonly used in competitive programming due to its efficiency and control over memory. Key topics to focus on include:
+                    <ul>
+                        <li>Syntax and Data Types</li>
+                        <li>Object-Oriented Programming (OOP)</li>
+                        <li>STL (Standard Template Library)</li>
+                        <li>Memory Management</li>
+                        <li>File Handling</li>
+                    </ul>
+                    Mastering C++ will significantly improve your performance in coding contests.
+                </p>
+                <span class="right-container-arrow"></span>
+            </div>
+        </div>
+        <div class="container left-container">
+            <img src="/img/java.jpg" alt="">
+            <div class="text-box">
+                <h2>java</h2>
+                <small>Time: 2-3 months</small>
+                <p>Java is a widely used object-oriented programming language known for its portability across platforms. It is important for handling large-scale applications and is also used in competitive programming. Key topics include:
+                    <ul>
+                        <li>Java Syntax and Data Types</li>
+                        <li>Object-Oriented Principles</li>
+                        <li>Collections Framework (Lists, Sets, Maps)</li>
+                        <li>Concurrency and Multithreading</li>
+                        <li>File I/O</li>
+                    </ul>
+                    Java's strong features make it suitable for solving complex problems.
+                </p>
+                <span class="left-container-arrow"></span>
+            </div>
+        </div>
+        <div class="container right-container">
+            <img src="/img/python.webp" alt="">
+            <div class="text-box">
+                <h2>Python</h2>
+                <small>Time: 1-2 months</small>
+                <p>Python is an easy-to-learn programming language with a rich set of libraries. Topics to cover include:
+                    <ul>
+                        <li>Python Basics (Syntax, Data Structures)</li>
+                        <li>Libraries: NumPy, Pandas, Matplotlib</li>
+                        <li>String Manipulation</li>
+                        <li>File Handling and Regular Expressions</li>
+                        <li>Algorithmic Problem Solving</li>
+                    </ul>
+                    Python is great for quick solutions and prototyping in competitive programming.
+                </p>
+                <span class="right-container-arrow"></span>
+            </div>
+        </div>
+        <div class="container left-container">
+            <img src="/img/html.jpg" alt="">
+            <div class="text-box">
+                <h2>HTML</h2>
+                <small>Time: 2-3 weeks</small>
+                <p>HTML is the foundational language of the web. You should learn:
+                    <ul>
+                        <li>Basic Tags: div, p, h1-h6, a, img, etc.</li>
+                        <li>Forms and Inputs</li>
+                        <li>HTML5 New Features</li>
+                        <li>Semantic HTML</li>
+                    </ul>
+                    Understanding HTML is essential for building web pages and structuring content.
+                </p>
+                <span class="left-container-arrow"></span>
+            </div>
+        </div>
+        <div class="container right-container">
+            <img src="/img/css.webp" alt="">
+            <div class="text-box">
+                <h2>CSS</h2>
+                <small>Time: 2-3 weeks</small>
+                <p>CSS is used to style and layout web pages. Topics include:
+                    <ul>
+                        <li>CSS Selectors and Properties</li>
+                        <li>Flexbox and Grid Layout</li>
+                        <li>Responsive Design</li>
+                        <li>Animations and Transitions</li>
+                    </ul>
+                    Mastering CSS is important for designing modern, responsive websites.
+                </p>
+                <span class="right-container-arrow"></span>
+            </div>
+        </div>
+        <div class="container left-container">
+            <img src="/img/js.webp" alt="">
+            <div class="text-box">
+                <h2>JavaScript</h2>
+                <small>Time: 1-2 months</small>
+                <p>JavaScript is essential for web development, making web pages interactive. Focus on:
+                    <ul>
+                        <li>JavaScript Syntax and Data Types</li>
+                        <li>DOM Manipulation</li>
+                        <li>Event Handling</li>
+                        <li>Asynchronous JavaScript (Promises, async/await)</li>
+                        <li>Frameworks: React.js, Node.js</li>
+                    </ul>
+                    Learning JavaScript opens up frontend and backend development opportunities.
+                </p>
+                <span class="left-container-arrow"></span>
+            </div>
+        </div>
+        <div class="container right-container">
+            <img src="/img/php.png" alt="">
+            <div class="text-box">
+                <h2>php</h2>
+                <small>Time: 1 month</small>
+                <p>PHP is a server-side scripting language widely used for web development. Key topics include:
+                    <ul>
+                        <li>PHP Syntax and Functions</li>
+                        <li>MySQL Database Integration</li>
+                        <li>Handling Forms and Sessions</li>
+                        <li>Security Best Practices</li>
+                        <li>Frameworks: Laravel</li>
+                    </ul>
+                    PHP is essential for backend development and dynamic website creation.
+                </p>
+                <span class="right-container-arrow"></span>
+            </div>
+        </div>
+        
+    </div>
+    <footer>
+        <p>&copy; 2024 BitLearn. All rights reserved.</p>
+    </footer>
 </body>
 </html>

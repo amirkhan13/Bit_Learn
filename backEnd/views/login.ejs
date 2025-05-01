@@ -14,12 +14,13 @@
 
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #F9FAFB;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+            background: linear-gradient(135deg, #00203f, #003c58);
+            margin: 0;
             animation: fadeIn 1s ease-out;
+            overflow-x: hidden;
+        }
+        body::-webkit-scrollbar {
+            display: none; 
         }
 
         @keyframes fadeIn {
@@ -30,9 +31,55 @@
                 opacity: 1;
             }
         }
+        header {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 16px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1;
+            backdrop-filter: blur(10px);
+        }
 
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        a {
+            color: #f5f3ef;
+            text-decoration: none;
+            transition: color 0.3s;
+        
+        }
+
+        a:hover {
+            color: #40c9c9;
+        }
+
+        .logo span {
+            color: #ffb400;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: white;
+            text-shadow: 0 0 6px #40c9c9;
+        }
+        .holder{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
         .login-container {
-            background-color: white;
+            background: rgba(24, 70, 129, 0.637);
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
             width: 400px;
             padding: 30px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -54,7 +101,7 @@
         h2 {
             text-align: center;
             margin-bottom: 20px;
-            color: #4F46E5;
+            color: #ffb400;
         }
 
         input[type="email"],
@@ -70,12 +117,12 @@
 
         input[type="email"]:focus,
         input[type="password"]:focus {
-            border-color: #4F46E5;
+            border-color: #525301;
             box-shadow: 0 0 5px rgba(79, 70, 229, 0.6);
         }
 
         .submit-btn {
-            background-color: #4F46E5;
+            background-color: #ff9900;
             color: white;
             padding: 12px 20px;
             border: none;
@@ -87,22 +134,23 @@
         }
 
         .submit-btn:hover {
-            background-color: #4338CA;
+            background-color: #ffbf2a;
         }
 
         .redirect {
+            color: #ffb400;
             text-align: center;
             margin-top: 15px;
         }
 
         .redirect a {
-            color: #4F46E5;
+            color: #eaed3a;
             text-decoration: none;
             transition: color 0.3s;
         }
 
         .redirect a:hover {
-            color: #4338CA;
+            color: #ffb400;
         }
 
        
@@ -127,30 +175,52 @@
         .alert-message {
             font-size: 16px;
         }
+        .role-select button:hover {
+            background-color: #eaed3a;
+        }
+        footer {
+        text-align: center;
+        padding: 10px;
+        color: antiquewhite;
+        background: rgba(255, 255, 255, 0.05);
+        margin-top: auto;
+        }
     </style>
 </head>
 <body>
-    <div class="login-container">
-        <h2>Login to BitLearn</h2>
-
- 
-        <% if (typeof error !== 'undefined' && error) { %>
-            <div class="alert">
-                <div class="alert-icon">!</div>
-                <div class="alert-message"><%= error %></div>
+    <header>
+        <div class="logo">
+            <a style="text-decoration: none; " href="index.html">
+                <span>{</span>BiT<span>}</span>.learn<span>;</span>
+            </a>
+        </div>
+    </header>
+    <div class="holder">
+        <div class="login-container">
+            <h2>Login to BitLearn</h2>
+    
+     
+            <% if (typeof error !== 'undefined' && error) { %>
+                <div class="alert">
+                    <div class="alert-icon">!</div>
+                    <div class="alert-message"><%= error %></div>
+                </div>
+            <% } %>
+    
+    
+            <form id="login-form" action="/login" method="post">
+                <input type="email" id="email" name="email" placeholder="Enter Email" required>
+                <input type="password" id="password" name="password" placeholder="Enter Password" required>
+                <button type="submit" class="submit-btn">Login</button>
+            </form>
+    
+            <div class="redirect">
+                <p>Don't have an account? <a href="/signup">Sign Up</a></p>
             </div>
-        <% } %>
-
-
-        <form id="login-form" action="/login" method="post">
-            <input type="email" id="email" name="email" placeholder="Enter Email" required>
-            <input type="password" id="password" name="password" placeholder="Enter Password" required>
-            <button type="submit" class="submit-btn">Login</button>
-        </form>
-
-        <div class="redirect">
-            <p>Don't have an account? <a href="/signup">Sign Up</a></p>
         </div>
     </div>
+    <footer>
+        <p>&copy; 2024 BitLearn. All rights reserved.</p>
+    </footer>
 </body>
 </html>

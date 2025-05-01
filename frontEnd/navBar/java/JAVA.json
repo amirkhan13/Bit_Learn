@@ -1,0 +1,105 @@
+{
+  "Introduction_to_Java": {
+    "What is JAVA": {
+      "description": "Java is a versatile, object-oriented programming language widely used for building applications ranging from web apps to mobile apps and enterprise-level systems. It’s platform-independent, meaning you can write code once and run it anywhere. Java was developed by Sun Microsystems in the mid-1990s and later acquired by Oracle Corporation. Java's 'Write Once, Run Anywhere' philosophy is possible due to the Java Virtual Machine (JVM) that abstracts the underlying system hardware.",
+      "environment_setup": {
+        "install_jdk": "Download and install the latest JDK (Java Development Kit) from Oracle's website or OpenJDK. You can choose the appropriate version based on your operating system and architecture (32-bit or 64-bit).",
+        "install_ide": "Use IntelliJ IDEA, Eclipse, or NetBeans for writing Java code. These Integrated Development Environments (IDEs) come with advanced features like code completion, debugging, and built-in version control integration.",
+        "verify_installation": "Open a terminal/command prompt and type: java -version. This should display the version of Java installed on your machine, confirming a successful installation."
+      }
+    },
+    "First_Program_Hello_World": {
+      "code": "public class HelloWorld {\n    public static void main(String[] args) {\n        System.out.println(\"Hello, World!\");\n    }\n}",
+      "steps": [
+        "Save this file as HelloWorld.java. Java filenames must match the class name inside the file.",
+        "Compile: javac HelloWorld.java. The 'javac' command compiles the Java source code into bytecode.",
+        "Run: java HelloWorld. The 'java' command runs the compiled bytecode on the JVM."
+      ],
+      "explanation": {
+        "public_class": "Declares a class named HelloWorld. In Java, all code must be inside a class. The keyword 'public' makes the class accessible from anywhere in the program.",
+        "main_method": "The main method where program execution begins. This method is always the entry point of a Java application. The 'String[] args' is used for passing command-line arguments.",
+        "println": "The println method is part of the System class and is used to print text to the console. It automatically moves the cursor to the next line after printing."
+      }
+    },
+    "Java_Basics": {
+      "variables_and_data_types": {
+        "code": "int age = 25;\ndouble salary = 50000.5;\nchar grade = 'A';\nboolean isStudent = true;\nString name = \"John\";",
+        "key_points": [
+          "Java is statically typed; you must declare variable types, ensuring type safety during compilation.",
+          "Common types include: int (integer values), float/double (floating-point numbers), boolean (true/false), char (single characters), and String (a sequence of characters)."
+        ]
+      },
+      "operators": {
+        "code": "int a = 10, b = 5;\nSystem.out.println(a + b); // Arithmetic\nSystem.out.println(a > b); // Comparison\na += b; // Assignment"
+      },
+      "control_structures": {
+        "if_else": {
+          "code": "if (age > 18) {\n    System.out.println(\"Adult\");\n} else {\n    System.out.println(\"Minor\");\n}",
+          "explanation": "The 'if' statement checks a condition, and the 'else' part executes if the condition is false. In this case, it checks if the 'age' variable is greater than 18."
+        },
+        "switch": {
+          "code": "switch (grade) {\n    case 'A': System.out.println(\"Excellent\"); break;\n    case 'B': System.out.println(\"Good\"); break;\n    default: System.out.println(\"Average\");\n}",
+          "explanation": "The 'switch' statement evaluates an expression and matches it against defined cases. In this example, it evaluates the 'grade' variable and prints the corresponding message."
+        },
+        "loops": {
+          "for_loop": {
+            "code": "for (int i = 0; i < 5; i++) {\n    System.out.println(i);\n}",
+            "explanation": "A 'for' loop is used when the number of iterations is known. In this case, it prints the values from 0 to 4, incrementing 'i' by 1 on each iteration."
+          },
+          "while_loop": {
+            "code": "int i = 0;\nwhile (i < 5) {\n    System.out.println(i);\n    i++;\n}",
+            "explanation": "A 'while' loop continues executing as long as the condition is true. In this case, it prints the values from 0 to 4, with 'i' being incremented after each iteration."
+          }
+        }
+      }
+    },
+    "Object_Oriented_Programming": {
+      "classes_and_objects": {
+        "code": "class Car {\n    String brand;\n    int speed;\n    void drive() {\n        System.out.println(\"Driving \" + brand);\n    }\n}\npublic class Main {\n    public static void main(String[] args) {\n        Car myCar = new Car();\n        myCar.brand = \"Toyota\";\n        myCar.speed = 120;\n        myCar.drive();\n    }\n}",
+        "explanation": "In this example, the Car class defines properties (brand and speed) and a method (drive). The Main class creates an instance of Car and calls the drive method, which prints a message with the brand."
+      },
+      "inheritance": {
+        "code": "class Vehicle {\n    void start() {\n        System.out.println(\"Vehicle started\");\n    }\n}\nclass Car extends Vehicle {\n    void honk() {\n        System.out.println(\"Car horn\");\n    }\n}\npublic class Main {\n    public static void main(String[] args) {\n        Car myCar = new Car();\n        myCar.start();\n        myCar.honk();\n    }\n}",
+        "explanation": "Inheritance allows one class (Car) to inherit the properties and methods of another (Vehicle). In this example, the Car class inherits the 'start' method from the Vehicle class."
+      },
+      "polymorphism": {
+        "code": "class Animal {\n    void sound() {\n        System.out.println(\"Animal sound\");\n    }\n}\nclass Dog extends Animal {\n    @Override\n    void sound() {\n        System.out.println(\"Bark\");\n    }\n}\npublic class Main {\n    public static void main(String[] args) {\n        Animal myDog = new Dog();\n        myDog.sound();\n    }\n}",
+        "explanation": "Polymorphism allows methods to take different forms. In this example, the 'sound' method is overridden in the Dog class, and when called, it produces the dog’s sound, 'Bark'."
+      },
+      "encapsulation": {
+        "code": "class Person {\n    private String name;\n    public String getName() {\n        return name;\n    }\n    public void setName(String name) {\n        this.name = name;\n    }\n}\npublic class Main {\n    public static void main(String[] args) {\n        Person person = new Person();\n        person.setName(\"Alice\");\n        System.out.println(person.getName());\n    }\n}",
+        "explanation": "Encapsulation involves keeping fields private and providing public getter and setter methods to access or modify those fields. In this case, the name field is encapsulated within the Person class."
+      }
+    },
+    "Intermediate_Topics": {
+      "exception_handling": {
+        "code": "try {\n    int result = 10 / 0;\n} catch (ArithmeticException e) {\n    System.out.println(\"Cannot divide by zero\");\n} finally {\n    System.out.println(\"Execution complete\");\n}",
+        "explanation": "Exception handling allows the program to gracefully handle errors. The 'try' block contains code that might throw an exception. The 'catch' block handles the exception, and the 'finally' block executes regardless of whether an exception occurred."
+      },
+      "collections_framework": {
+        "code": "import java.util.ArrayList;\npublic class Main {\n    public static void main(String[] args) {\n        ArrayList<String> list = new ArrayList<>();\n        list.add(\"Apple\");\n        list.add(\"Banana\");\n        list.forEach(System.out::println);\n    }\n}",
+        "explanation": "Java’s collections framework provides several classes for managing groups of objects. In this case, an ArrayList is used to store and print a list of fruits."
+      },
+      "file_handling": {
+        "code": "import java.io.FileWriter;\nimport java.io.IOException;\npublic class Main {\n    public static void main(String[] args) {\n        try (FileWriter writer = new FileWriter(\"example.txt\")) {\n            writer.write(\"Hello, file!\");\n        } catch (IOException e) {\n            e.printStackTrace();\n        }\n    }\n}",
+        "explanation": "File handling in Java involves reading from and writing to files. This code demonstrates writing text to a file using FileWriter. The 'try-with-resources' statement ensures the file is closed automatically."
+      },
+      "multithreading": {
+        "code": "class MyThread extends Thread {\n    public void run() {\n        System.out.println(\"Thread running\");\n    }\n}\npublic class Main {\n    public static void main(String[] args) {\n        MyThread t1 = new MyThread();\n        t1.start();\n    }\n}",
+        "explanation": "Multithreading allows multiple tasks to run concurrently. In this example, a new thread is created and started, which executes the 'run' method."
+      },
+      "java_8_features": {
+        "lambda_expressions": {
+          "code": "interface MathOperation {\n    int operation(int a, int b);\n}\npublic class Main {\n    public static void main(String[] args) {\n        MathOperation add = (a, b) -> a + b;\n        System.out.println(add.operation(5, 3));\n    }\n}",
+          "explanation": "Lambda expressions in Java provide a way to pass behavior as parameters. In this example, a lambda expression defines an addition operation and prints the result."
+        }
+      }
+    },
+    "Projects_to_Practice": {
+        "Student Management System": "Create a system to manage student records, including registration, grades, and attendance.",
+        "Banking Application": "Design a simple application to manage accounts, perform transactions, and check balance.",
+        "Library Management System": "Build an app to manage book details, borrowing, and returns."
+    }
+
+  }
+}

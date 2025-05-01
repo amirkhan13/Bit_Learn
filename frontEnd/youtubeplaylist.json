@@ -1,0 +1,119 @@
+{
+    "playlists": [
+      {
+        "channelId": "UCJskGeByzRRSvmOyZOz61ig",
+        "playlistId": "PLgUwDviBIf0oF6QL8m22w1hIDC1vJ_BHz",
+        "title": "Strivers A2Z-DSA Course | DSA Playlist | Placements",
+        "width": 320,
+        "height": 180,
+        "imageUrl": "https://i.ytimg.com/vi/0bHoB32fuj0/mqdefault.jpg",
+        "description": "Covers DSA with pseudocode.",
+        "lessons": "315"
+      },
+      {
+        "channelId": "UCBwmMxybNva6P_5VmxjzwqA",
+        "playlistId": "PLfqMhTWNBTe137I_EPQd34TsgV6IO55pt",
+        "title": "Complete C++ DSA Course | Data Structures & Algorithms Playlist",
+        "imageUrl": "https://i.ytimg.com/vi/VTLCoHnyACE/mqdefault.jpg",
+        "description": "Start your DSA journey with a complete C++ series.",
+        "lessons": "52",
+        "width": 640,
+        "height": 480
+      },
+      {
+        "channelId": "UCldyi11QYNXYXiLjVbyw5dA",
+        "playlistId": "PLDzeHZWIZsTryvtXdMr6rPh4IDexB5NIA",
+        "title": "Complete C++ Placement DSA Course",
+        "imageUrl": "https://i.ytimg.com/vi/WQoB2z67hvY/mqdefault.jpg",
+        "description": "Build a strong foundation in DSA for interviews and competitive programming.",
+        "lessons": "149"
+      },
+      {
+        "channelId": "UCeVMnSShP_Iviwkknt83cww",
+        "playlistId": "PLu0W_9lII9ahIappRPN0MCAgtOu3lQjQi",
+        "title": "Data Structures and Algorithms - Coding Interview",
+        "imageUrl": "https://i.ytimg.com/vi/5_5oE5lgrhw/mqdefault.jpg",
+        "description": "Learn DSA concepts for coding interviews and problem-solving.",
+        "lessons": "92",
+        "width": 120,
+        "height": 90
+      },
+      {
+        "channelId": "UCNQ6FEtztATuaVhZKCY28Yw",
+        "playlistId": "PLu71SKxNbfoBuX3f4EOACle2y-tRC5Q37",
+        "title": "Chai aur Javascript | हिन्दी",
+        "imageUrl": "https://i.ytimg.com/vi/Hr5iLG7sUa0/mqdefault.jpg",
+        "description": "Master JavaScript fundamentals in Hindi, from basic to advanced concepts.",
+        "lessons": "51"
+      },
+      {
+        "channelId": "UC1XBh-m27kkgwLAwu_SRJBg",
+        "playlistId": "PLGjplNEQ1it_oTvuLRNqXfz_v_0pq6unW",
+        "title": "JavaScript Full Course (2024) - Beginners to Pro",
+        "imageUrl": "https://i.ytimg.com/vi/ajdRvxDWH4w/mqdefault.jpg",
+        "description": "Learn JavaScript, HTML, and CSS with practice and projects.",
+        "lessons": "14",
+        "width": 640,
+        "height": 480
+      },
+      {
+        "channelId": "UCNQ6FEtztATuaVhZKCY28Yw",
+        "playlistId": "PLu71SKxNbfoDqgPchmvIsL4hTnJIrtige",
+        "title": "Chai aur react | with projects",
+        "imageUrl": "https://i.ytimg.com/vi/vz1RlUyrc3w/mqdefault.jpg",
+        "description": "Learn ReactJS basics by building projects.",
+        "lessons": "34"
+      },
+      {
+        "channelId": "UCldyi11QYNXYXiLjVbyw5dA",
+        "playlistId": "PLDzeHZWIZsTo0wSBcg4-NMIbC0L8evLrD",
+        "title": "Complete Web Dev using MERN stack || Love Babbar",
+        "imageUrl": "https://i.ytimg.com/vi/Vi9bxu-M-ag/mqdefault.jpg",
+        "description": "Learn Full Stack Web Development with MERN stack.",
+        "lessons": "84",
+        "width": 120,
+        "height": 90
+      },
+      {
+        "channelId": "UC1XBh-m27kkgwLAwu_SRJBg",
+        "playlistId": "PLGjplNEQ1it8-0CmoljS5yeV-GlKSUEt0",
+        "title": "Python Language Full Course (2024)",
+        "imageUrl": "https://i.ytimg.com/vi/t2_Q2BRzeEE/mqdefault.jpg",
+        "description": "Learn Python from scratch with key concepts and projects.",
+        "lessons": "9",
+        "width": 640,
+        "height": 480
+      },
+      {
+        "channelId": "UCeVMnSShP_Iviwkknt83cww",
+        "playlistId": "PLu0W_9lII9agwh1XjRt242xIpHhPT2llg",
+        "title": "Python for Beginners (Full Course)",
+        "imageUrl": "https://i.ytimg.com/vi/7wnove7K-ZQ/mqdefault.jpg",
+        "description": "A 100-day challenge to learn Python from beginner to advanced in Hindi.",
+        "lessons": "100",
+        "width": 120,
+        "height": 90
+      },
+      {
+        "channelId": "UCBwmMxybNva6P_5VmxjzwqA",
+        "playlistId": "PLfqMhTWNBTe3LtFWcvwpqTkUSlB32kJop",
+        "title": "Java & DSA Course for Placement",
+        "imageUrl": "https://i.ytimg.com/vi/yRpLlJmRo2w/mqdefault.jpg",
+        "description": "Learn Java and DSA concepts for placement preparation.",
+        "lessons": "39",
+        "width": 120,
+        "height": 90
+      },
+      {
+        "channelId": "UCDrf0V4fcBr5FlCtKwvpfwA",
+        "playlistId": "PLxgZQoSe9cg0df_GxVjz3DD_Gck5tMXAd",
+        "title": "C++ and DSA Foundation Course",
+        "imageUrl": "https://i.ytimg.com/vi/bL-o2xBENY0/mqdefault.jpg",
+        "description": "Foundational C++ and DSA course for beginners.",
+        "lessons": "68",
+        "width": 120,
+        "height": 90
+      }
+    ]
+  }
+  

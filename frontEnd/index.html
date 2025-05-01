@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BitLearn</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body >
+
+<header>
+    <div class="logo">
+        <a style="text-decoration: none;" href="index.html">
+            <span>{</span>BiT<span>}</span>.learn<span>;</span>
+        </a>
+    </div>
+    
+    <nav>
+        <a href="./navBar/html/html.html">HTML</a>
+        <a href="./navBar/css/css.html">CSS</a>
+        <a href="./navBar/javascript/javascript.html">JavaScript</a>
+        <a href="./navBar/python/python.html">Python</a>
+        <a href="./navBar/php/php.html">PHP</a>
+        <a href="./navBar/cpp/cpp.html">C++</a>
+        <a href="./navBar/java/java.html">Java</a>
+        <a href="./navBar/dsa/dsa.html">DSA</a>
+
+    </nav>
+    <div class="rightnav">
+        <a href="/signup" style=" margin-right:10px;">Roadmaps</a>
+        <a href="videoComponent.html">VideoTutorials</a>
+    </div>
+</header>
+
+
+<button class="chat-button">  <span>{</span>BiT<span>}</span></button>
+<main class="main-section">
+
+    <section class="chat-window">
+
+        <button class="close"> Close</button>
+        <div class="chat">
+            <div class="model">
+                <p>Hi, How can i help you?</p>
+            </div>
+          
+            
+            
+        </div>
+        <div class="input-area">
+            <input type="text" name="" id="" placeholder="Ask me something...">
+            <button >
+                <img src="img/send-icon.png" alt="send-icon">
+            </button>
+        </div>  
+    </section>
+    <h1 style="font-size:  45px; margin-bottom: 10px; margin-top: 8%;  color: white;">Welcome to Your Coding Adventure</h1>
+    <h1 id="text" style=" color: white;">Learn, Create, and Innovate with Bit.Learn!</h1>
+    
+
+    <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search coding tutorials, e.g. HTML">
+        <button onclick="performSearch()">Search</button>
+    </div>
+
+
+    <div class="search-results" id="searchResultsContainer" style="display:none;">
+
+    </div>
+  
+    <div class="landingPageSection">
+        <div class="cards-container">
+            <div class="card">
+                <h2>Welcome to Bit.Learn</h2>
+                <p>Unlock your potential with {BiT}.learn;, a platform designed to make coding accessible, interactive, and engaging. Whether you're a beginner starting your coding journey or a seasoned developer aiming to expand your expertise, we provide the tools and resources to help you succeed.</p>
+            </div>
+            <div class="card">
+                <h2>Why Bit.Learn?</h2>
+                <p>At {BiT}.learn;, we blend the best of text-based and video learning to cater to diverse learning preferences. With tutorials crafted by top instructors, our platform empowers you to:
+                    <ul>
+                        <li>Master programming languages and frameworks.</li>
+                        <li>Explore algorithms and data structures.</li>
+                        <li>Gain practical skills with integrated code practice.</li>
+                    </ul>
+                </p>
+            </div>
+            <div class="card">
+                <h2>Join Our Community</h2>
+                <p>Connect with fellow learners and experts on {BiT}.learn;. Our thriving community offers:
+                    <ul>
+                        <li>Collaborative learning and knowledge sharing.</li>
+                        <li>A platform to showcase your projects and achievements.</li>
+                        <li>Opportunities to interact, grow, and excel together.</li>
+                    </ul>
+                    Let’s build something extraordinary—join us today!
+                </p>
+            </div>
+            <div class="card">
+                <h2>Get Started Today</h2>
+                <p>Your journey to becoming a proficient coder starts here. Let’s make something amazing together!</p>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="footer">
+    <div class="footer-content" style=" color: white;">
+        <p>&copy; 2024 BitLearn. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="#">About Us</a> | 
+            <a href="#">Privacy Policy</a> | 
+            <a href="#">Terms of Service</a>
+        </div>
+    </div>
+</footer>
+
+<script type="importmap">
+    {
+      "imports": {
+        "@google/generative-ai": "https://esm.run/@google/generative-ai"
+      }
+    }
+</script>
+<script src="search.js"></script>
+<script type="module"  src="bitAssistant.js"></script>
+</body>
+</html>

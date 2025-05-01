@@ -1,0 +1,163 @@
+{
+  "Introduction to DSA ": {
+    "What is DSA": {
+      "description": "Data Structures and Algorithms (DSA) are the building blocks for solving problems in programming efficiently. Data structures are ways of organizing and storing data, while algorithms are step-by-step procedures for solving a problem. Understanding DSA helps improve the efficiency and performance of programs."
+    },
+    "Types_of_Data_Structures": {
+      "Primitive_Data_Structures": {
+        "description": "These are the basic types provided by programming languages.",
+        "examples": [
+          "Integer: Whole numbers (e.g., int in Java, C, C++)",
+          "Float: Decimal numbers (e.g., float in C, C++, Java)",
+          "Character: Single characters (e.g., char in C, C++, Java)",
+          "Boolean: True or false values"
+        ]
+      },
+      "Non_Primitive_Data_Structures": {
+        "description": "These are built from primitive data types and are more complex.",
+        "examples": [
+          "Arrays: Collection of elements of the same data type stored in contiguous memory.",
+          "Linked Lists: Collection of nodes, where each node contains data and a reference to the next node."
+        ]
+      }
+    },
+    "Arrays": {
+      "description": "An array is a collection of items stored at contiguous memory locations. All elements of an array are of the same type.",
+      "basic_operations": {
+        "access": "Accessing an element using an index (constant time O(1)).",
+        "insert": "Inserting an element at a given position.",
+        "delete": "Removing an element from the array.",
+        "search": "Finding an element by iterating through the array."
+      },
+      "drawbacks": [
+        "Fixed size: Once declared, the size cannot be changed.",
+        "Expensive insertion/deletion: These operations require shifting elements."
+      ],
+      "example": {
+        "code": "int[] arr = {1, 2, 3, 4, 5};\nSystem.out.println(arr[2]); // Output: 3"
+      }
+    },
+    "Linked_Lists": {
+      "description": "A linked list is a linear data structure where each element is a separate object, each containing data and a reference (link) to the next node.",
+      "types": [
+        "Singly Linked List: Each node points to the next node, and the last node points to null.",
+        "Doubly Linked List: Each node has two references, one to the next node and another to the previous node.",
+        "Circular Linked List: The last node points to the first node, making the list circular."
+      ],
+      "basic_operations": [
+        "Insertion: Insert a node at the beginning, end, or at a specific position.",
+        "Deletion: Remove a node from the beginning, end, or specific position.",
+        "Traversal: Accessing each node in the list."
+      ],
+      "example": {
+        "code": "class Node {\n    int data;\n    Node next;\n    public Node(int data) {\n        this.data = data;\n        this.next = null;\n    }\n}\npublic class LinkedList {\n    Node head;\n    public void insert(int data) {\n        Node newNode = new Node(data);\n        if (head == null) {\n            head = newNode;\n        } else {\n            Node temp = head;\n            while (temp.next != null) {\n                temp = temp.next;\n            }\n            temp.next = newNode;\n        }\n    }\n}"
+      },
+      "advantages": [
+        "Dynamic size: Can grow and shrink in size as needed.",
+        "Efficient insertions/deletions: Do not require shifting elements like arrays."
+      ],
+      "drawbacks": [
+        "Random access is not possible (O(n) time complexity for accessing an element).",
+        "Extra memory is required for storing references (pointers)."
+      ]
+    },
+    "Stacks_and_Queues": {
+      "description": "Stacks and queues are abstract data types used to store elements in specific orders.",
+      "stack": {
+        "definition": "A stack follows the LIFO (Last In, First Out) principle.",
+        "operations": [
+          "Push: Add an element to the stack.",
+          "Pop: Remove an element from the stack."
+        ],
+        "example": {
+          "code": "class Stack {\n    private LinkedList<Integer> list = new LinkedList<>();\n    public void push(int value) {\n        list.addFirst(value);  // Adds to the front (top of the stack)\n    }\n    public int pop() {\n        if (list.isEmpty()) throw new EmptyStackException();\n        return list.removeFirst();  // Removes from the front\n    }\n}"
+        }
+      },
+      "queue": {
+        "definition": "A queue follows the FIFO (First In, First Out) principle.",
+        "operations": [
+          "Enqueue: Add an element to the queue.",
+          "Dequeue: Remove an element from the queue."
+        ],
+        "example": {
+          "code": "class Queue {\n    private LinkedList<Integer> list = new LinkedList<>();\n    public void enqueue(int value) {\n        list.addLast(value);  // Adds to the end\n    }\n    public int dequeue() {\n        if (list.isEmpty()) throw new NoSuchElementException();\n        return list.removeFirst();  // Removes from the front\n    }\n}"
+        }
+      }
+    },
+    "Hashing_and_Hash_Tables": {
+      "description": "A hash table stores key-value pairs. It uses a hash function to convert the key into an index, where the value is stored.",
+      "operations": [
+        "Insert: Use a hash function to find the index and insert the value.",
+        "Search: Use the key to find the value in constant time (on average O(1)).",
+        "Delete: Remove the key-value pair using the hash."
+      ],
+      "example": {
+        "code": "import java.util.HashMap;\npublic class Main {\n    public static void main(String[] args) {\n        HashMap<String, Integer> map = new HashMap<>();\n        map.put(\"Apple\", 3);\n        map.put(\"Banana\", 2);\n        System.out.println(map.get(\"Apple\"));  // Output: 3\n    }\n}"
+      },
+      "advantages": [
+        "Fast access to data (O(1) on average).",
+        "Efficient for searching and deleting data."
+      ],
+      "drawbacks": [
+        "Hash collisions may occur, requiring resolution techniques like chaining or open addressing."
+      ]
+    },
+    "Sorting_and_Searching_Algorithms": {
+      "sorting_algorithms": [
+        {
+          "name": "Bubble Sort",
+          "description": "Bubble sort repeatedly compares adjacent elements and swaps them if they are in the wrong order.",
+          "time_complexity": "O(n^2) in the worst case.",
+          "example": {
+            "code": "public class BubbleSort {\n    public static void bubbleSort(int[] arr) {\n        for (int i = 0; i < arr.length - 1; i++) {\n            for (int j = 0; j < arr.length - 1 - i; j++) {\n                if (arr[j] > arr[j + 1]) {\n                    int temp = arr[j];\n                    arr[j] = arr[j + 1];\n                    arr[j + 1] = temp;\n                }\n            }\n        }\n    }\n}"
+          }
+        },
+        {
+          "name": "Merge Sort",
+          "description": "Merge sort divides the array into halves, recursively sorts each half, and merges the sorted halves.",
+          "time_complexity": "O(n log n).",
+          "example": {
+            "code": "public class MergeSort {\n    public static void mergeSort(int[] arr) {\n        if (arr.length <= 1) return;\n        int mid = arr.length / 2;\n        int[] left = Arrays.copyOfRange(arr, 0, mid);\n        int[] right = Arrays.copyOfRange(arr, mid, arr.length);\n        mergeSort(left);\n        mergeSort(right);\n        merge(arr, left, right);\n    }\n    private static void merge(int[] arr, int[] left, int[] right) {\n        int i = 0, j = 0, k = 0;\n        while (i < left.length && j < right.length) {\n            if (left[i] < right[j]) arr[k++] = left[i++];\n            else arr[k++] = right[j++];\n        }\n        while (i < left.length) arr[k++] = left[i++];\n        while (j < right.length) arr[k++] = right[j++];\n    }\n}"
+          }
+        },
+        {
+          "name": "Quick Sort",
+          "description": "Quick sort selects a pivot element and partitions the array into two parts: elements less than the pivot and elements greater than the pivot.",
+          "time_complexity": "O(n log n) on average.",
+          "example": {
+            "code": "public class QuickSort {\n    public static void quickSort(int[] arr, int low, int high) {\n        if (low < high) {\n            int pi = partition(arr, low, high);\n            quickSort(arr, low, pi - 1);\n            quickSort(arr, pi + 1, high);\n        }\n    }\n    private static int partition(int[] arr, int low, int high) {\n        int pivot = arr[high];\n        int i = (low - 1);\n        for (int j = low; j < high; j++) {\n            if (arr[j] <= pivot) {\n                i++;\n                int temp = arr[i];\n                arr[i] = arr[j];\n                arr[j] = temp;\n            }\n        }\n        int temp = arr[i + 1];\n        arr[i + 1] = arr[high];\n        arr[high] = temp;\n        return i + 1;\n    }\n}"
+          }
+        }
+      ],
+      "searching_algorithms": [
+        {
+          "name": "Linear Search",
+          "description": "Linear search iterates through each element in the list and checks if it matches the target.",
+          "time_complexity": "O(n).",
+          "example": {
+            "code": "public class LinearSearch {\n    public static int linearSearch(int[] arr, int target) {\n        for (int i = 0; i < arr.length; i++) {\n            if (arr[i] == target) return i;\n        }\n        return -1;\n    }\n}"
+          }
+        },
+        {
+          "name": "Binary Search",
+          "description": "Binary search works on sorted arrays by dividing the search interval in half and repeatedly narrowing down the range.",
+          "time_complexity": "O(log n).",
+          "example": {
+            "code": "public class BinarySearch {\n    public static int binarySearch(int[] arr, int target) {\n        int low = 0, high = arr.length - 1;\n        while (low <= high) {\n            int mid = low + (high - low) / 2;\n            if (arr[mid] == target) return mid;\n            if (arr[mid] < target) low = mid + 1;\n            else high = mid - 1;\n        }\n        return -1;\n    }\n}"
+          }
+        }
+      ]
+    },
+    "Time_Complexity": {
+      "O(1)": "Constant time.",
+      "O(n)": "Linear time.",
+      "O(log n)": "Logarithmic time.",
+      "O(n^2)": "Quadratic time."
+    },
+    "Intermediate_DSA_Topics": {
+      "Heap": "A special tree-based data structure used for implementing priority queues.",
+      "Trie": "A tree-like data structure used for storing strings.",
+      "Dynamic Programming": "Solve problems by breaking them into subproblems and storing their solutions."
+  }
+}
+}

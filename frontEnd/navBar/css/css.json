@@ -1,0 +1,190 @@
+{
+  "Introduction to CSS": {
+    "what_is_css": "CSS (Cascading Style Sheets) is a stylesheet language used to style HTML documents. It controls layout, colors, fonts, and other visual aspects. It is essential for creating visually engaging and responsive websites. CSS allows separation of content (HTML) and presentation (CSS), promoting better maintainability and reusability."
+  },
+  "basics": {
+    "syntax": {
+      "description": "CSS is written as selector { property: value; } where the selector identifies the HTML element, and the property-value pair defines the style to be applied.",
+      "example": {
+        "code": "p { color: blue; font-size: 16px; }",
+        "explanation": "This rule sets the text color of all <p> elements to blue and the font size to 16 pixels."
+      }
+    },
+    "ways_to_add_css": {
+      "description": "CSS can be added to HTML in three ways: inline, internal, and external.",
+      "inline_css": {
+        "code": "<p style=\"color: red;\">Hello</p>",
+        "explanation": "Inline CSS applies styles directly to an HTML element using the style attribute. It is suitable for quick testing but not recommended for large-scale projects."
+      },
+      "internal_css": {
+        "code": "<style> p { color: green; } </style>",
+        "explanation": "Internal CSS is placed within a <style> tag in the <head> section of the HTML document. It is useful for styling a single document."
+      },
+      "external_css": {
+        "code": "<link rel=\"stylesheet\" href=\"styles.css\">",
+        "explanation": "External CSS links an HTML document to a separate stylesheet file, promoting reusability and modularity."
+      }
+    }
+  },
+  "selectors": {
+    "basic_selectors": {
+      "description": "Selectors are used to target HTML elements for styling.",
+      "universal": {
+        "code": "* { margin: 0; padding: 0; }",
+        "explanation": "The universal selector (*) applies styles to all elements, often used for resetting default browser styles."
+      },
+      "element": {
+        "code": "h1 { color: purple; }",
+        "explanation": "The element selector targets all <h1> elements, changing their text color to purple."
+      },
+      "class": {
+        "code": ".title { font-weight: bold; }",
+        "explanation": "The class selector targets elements with the class \"title\", making their text bold. Classes are reusable across multiple elements."
+      },
+      "id": {
+        "code": "#main { background-color: lightblue; }",
+        "explanation": "The ID selector targets the element with the ID \"main\", setting its background color to light blue. IDs are unique and should be used for single elements."
+      }
+    },
+    "grouping_nesting": {
+      "description": "Selectors can be grouped or nested to apply styles efficiently.",
+      "group_selector": {
+        "code": "h1, p { color: gray; }",
+        "explanation": "This group selector applies the same styles to both <h1> and <p> elements."
+      },
+      "descendant_selector": {
+        "code": "div p { color: red; }",
+        "explanation": "The descendant selector targets <p> elements inside <div> elements, styling only those <p> elements."
+      }
+    }
+  },
+  "box_model": {
+    "description": "The CSS Box Model describes the rectangular boxes generated for elements in the document tree. Each box consists of content, padding, border, and margin.",
+    "example": {
+      "code": "div { width: 200px; padding: 20px; border: 5px solid black; margin: 10px; }",
+      "explanation": "This style sets a 200px-wide content area with 20px padding, a 5px solid black border, and 10px margin around the <div>."
+    }
+  },
+  "typography": {
+    "text_properties": {
+      "description": "CSS offers various properties to style text and improve readability.",
+      "examples": {
+        "color": {
+          "code": "color: red;",
+          "explanation": "Sets the text color to red."
+        },
+        "font_family": {
+          "code": "font-family: Arial, sans-serif;",
+          "explanation": "Specifies the typeface to use, with fallback options."
+        },
+        "font_size": {
+          "code": "font-size: 18px;",
+          "explanation": "Sets the size of the text to 18 pixels."
+        },
+        "font_weight": {
+          "code": "font-weight: bold;",
+          "explanation": "Makes the text bold."
+        },
+        "text_align": {
+          "code": "text-align: center;",
+          "explanation": "Centers the text horizontally."
+        },
+        "text_decoration": {
+          "code": "text-decoration: none;",
+          "explanation": "Removes underlines or other decorations from text."
+        }
+      }
+    }
+  },
+  "layouts": {
+    "display": {
+      "description": "CSS display property controls how elements are rendered in the layout.",
+      "examples": {
+        "block": {
+          "code": "display: block;",
+          "explanation": "Block elements occupy the full width of their container."
+        },
+        "inline": {
+          "code": "display: inline;",
+          "explanation": "Inline elements flow within the content without starting a new line."
+        },
+        "flex": {
+          "code": "display: flex;",
+          "explanation": "Flexbox layout provides a flexible way to align and distribute space among items."
+        }
+      }
+    },
+    "positioning": {
+      "description": "CSS positioning allows precise placement of elements.",
+      "examples": {
+        "static": {
+          "code": "position: static;",
+          "explanation": "Default positioning, elements follow the normal flow."
+        },
+        "relative": {
+          "code": "position: relative; top: 10px;",
+          "explanation": "Position relative to its normal flow position, offset by 10px from the top."
+        },
+        "absolute": {
+          "code": "position: absolute;",
+          "explanation": "Position relative to the nearest positioned ancestor."
+        },
+        "fixed": {
+          "code": "position: fixed;",
+          "explanation": "Fixed position relative to the viewport, unaffected by scrolling."
+        }
+      }
+    },
+    "flexbox": {
+      "description": "Flexbox is a one-dimensional layout method for arranging items in rows or columns.",
+      "container": {
+        "code": "display: flex; justify-content: center; align-items: center;",
+        "explanation": "Aligns items in the container centrally, both horizontally and vertically."
+      }
+    }
+  },
+  "colors_and_backgrounds": {
+    "colors": {
+      "description": "CSS supports various methods for defining colors.",
+      "examples": {
+        "named_colors": {
+          "code": "red, blue, green",
+          "explanation": "Predefined color names for convenience."
+        },
+        "hexadecimal": {
+          "code": "#ff0000",
+          "explanation": "Hex code for defining red color."
+        },
+        "rgb": {
+          "code": "rgb(255, 0, 0)",
+          "explanation": "RGB function for defining red color."
+        },
+        "hsl": {
+          "code": "hsl(0, 100%, 50%)",
+          "explanation": "HSL function for defining red color using hue, saturation, and lightness."
+        }
+      }
+    },
+    "backgrounds": {
+      "description": "CSS background properties enhance visual design.",
+      "examples": {
+        "background_color": {
+          "code": "background-color: yellow;",
+          "explanation": "Sets the background color to yellow."
+        },
+        "background_image": {
+          "code": "background-image: url('image.jpg');",
+          "explanation": "Sets an image as the background."
+        },
+        "background_repeat": {
+          "code": "background-repeat: no-repeat;",
+          "explanation": "Prevents the background image from repeating."
+        },
+        "background_size": {
+          "code": "background-size: cover;",
+          "explanation": "Scales the background image to cover the container."
+        }
+      }
+    }
+  }
+}

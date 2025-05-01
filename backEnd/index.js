@@ -12,40 +12,45 @@ app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
 app.use(express.static(path.join(__dirname, "../frontEnd")));
+app.use(express.static(path.join(__dirname, "../frontEnd/navBar")));
 
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "../frontEnd/index.html"));
 });
+
+app.get("/html", (req, res) => {
+  res.sendFile(path.join(__dirname, "../frontEnd/navBar/html/html.html"));
+});
 app.get("/css", (req, res) => {
-  res.sendFile(path.join(__dirname, "../frontEnd/css.html")); // Make sure this file exists
+  res.sendFile(path.join(__dirname, "../frontEnd/navBar/css/css.html")); 
 });
 
 app.get("/javascript", (req, res) => {
-  res.sendFile(path.join(__dirname, "../frontEnd/javascript.html")); // Ensure file exists
+  res.sendFile(path.join(__dirname, "../frontEnd/navBar/javascript/javascript.html"));
 });
 
 app.get("/python", (req, res) => {
-  res.sendFile(path.join(__dirname, "../frontEnd/python.html")); // Ensure file exists
+  res.sendFile(path.join(__dirname, "../frontEnd/navBar/python/python.html")); 
 });
 
 app.get("/php", (req, res) => {
-  res.sendFile(path.join(__dirname, "../frontEnd/php.html")); // Ensure file exists
+  res.sendFile(path.join(__dirname, "../frontEnd/navBar/php/php.html"));  
 });
 
 app.get("/cpp", (req, res) => {
-  res.sendFile(path.join(__dirname, "../frontEnd/cpp.html")); // Ensure file exists
+  res.sendFile(path.join(__dirname, "../frontEnd/navBar/cpp/cpp.html"));  
 });
 
 app.get("/java", (req, res) => {
-  res.sendFile(path.join(__dirname, "../frontEnd/java.html")); // Ensure file exists
+  res.sendFile(path.join(__dirname, "../frontEnd/navBar/java/java.html")); 
 });
 
 app.get("/dsa", (req, res) => {
-  res.sendFile(path.join(__dirname, "../frontEnd/dsa.html")); // Ensure file exists
+  res.sendFile(path.join(__dirname, "../frontEnd/navBar/dsa/dsa.html")); 
 });
 
 app.get("/video", (req, res) => {
-  res.sendFile(path.join(__dirname, "../frontEnd/videoComponent.html")); // 
+  res.sendFile(path.join(__dirname, "../frontEnd/videoComponent.html")); 
 });
 
 app.get("/about", (req, res) => {
