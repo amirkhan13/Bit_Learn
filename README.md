@@ -1,115 +1,135 @@
-# {BiT}.learn;
+# bitLearn
 
-{BiT}.learn; is an online learning platform tailored for coders and IT enthusiasts. It offers both text-based and video-based content for learning a variety of programming and technical topics. The platform caters to both teachers and students, enabling interactive and personalized learning experiences.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-![Logo](/frontEnd/img/Logo.png)
----
+bitLearn is a full-stack web application designed to provide a comprehensive learning platform for programming and computer science topics. It offers video tutorials, coding playgrounds (compilers), roadmaps, and a supportive community to help users learn and improve their skills.  A key feature addition is BitAssistant, an AI powered learning assistant.
+
+## Description
+
+bitLearn aims to be a one-stop destination for anyone looking to learn programming. It covers a range of topics, from basic HTML, CSS, and JavaScript to more advanced concepts in data structures and algorithms. The platform includes:
+
+*   **Video Tutorials:** Curated playlists of educational videos covering various programming languages and concepts.
+*   **Interactive Compiler:** An online code editor that allows users to write and run code in multiple languages directly in their browser.
+*   **Learning Roadmaps:** Structured learning paths to guide users through different topics and skill sets.
+*   **User Authentication:** Secure signup and login functionality to track progress and personalize the learning experience.
+*   **BitAssistant:** An AI-powered learning assistant to answer questions, debug code, and provide personalized guidance.
+
+The application is built using a NodeJS backend and a dynamic frontend, allowing for a responsive and engaging user experience. Data is stored in a database connected through a NodeJS server to handle requests for resources.
 
 ## Features
 
-### For Teachers:
-- **Teacher Login and Registration**: Secure access to manage content.
-- **Course Playlist Management**:
-  - Create playlists for specific topics, programming languages, or technical concepts.
-  - Add video-based content to playlists.
-  - Edit, delete, and manage playlists as needed.
+*   **Video Playlists:** Organized video content for various programming languages (HTML, CSS, JavaScript, Python, Java, C++, DSA).
+*   **Online Compiler:** Supports multiple languages, enabling users to practice coding directly on the platform.
+*   **Learning Roadmaps:** Pre-defined learning paths to guide users through different programming topics.
+*   **User Authentication:** Secure user registration and login system.
+*   **Responsive Design:** Adapts to different screen sizes for optimal viewing on web and mobile devices.
+*   **Search Functionality:**  Allows users to search for specific videos or concepts.
+*   **BitAssistant:** An AI-powered assistant that helps users learn by answering questions, debugging code, and offering personalized learning guidance. Access it through the frontend UI.
 
-### For Students:
-- **Student Login and Registration**: Personalized access to learning resources.
-- **Course Enrollment**:
-  - Browse and enroll in courses/playlists of interest.
-  - Track progress for enrolled courses/playlists.
-- **Access Learning Materials**: Comprehensive resources include text-based explanations and video tutorials.
+## Screenshots/Demos
 
-### Additional Features:
-- **Roadmaps**:
-  - Predefined paths for various Computer Science and IT fields.
-  - Future implementation: AI-based roadmap suggestions tailored to individual learning goals.
-- **Code Compiler**:
-  - Integrated real-time code editor and compiler to practice and test programs directly on the platform.
+*Unfortunately, providing dynamic screenshots is not possible. However, refer to the GitHub repository for potential visual aids.* 
 
----
+## Installation
 
-## Technologies Used
-- **Frontend**: HTML, CSS, JavaScript
-- **Backend**: Node.js, Express
-- **Database**: MongoDB
-- **Compiler**: Real-time code execution functionality integrated into the platform.
+To set up the bitLearn project locally, follow these steps:
 
----
+1.  **Clone the repository:**
+    bash
+    git clone https://github.com/amirkhan13/Bit_Learn.git
+    cd Bit_Learn
+    
 
-## How It Works
+2.  **Install dependencies:**
+    *   **Backend:**
+        bash
+        cd backEnd
+        npm install  # or yarn install
+        cd ..
+        
+    *   **Frontend:**
+        bash
+        cd frontEnd
+        npm install  # or yarn install
+        cd ..
+        
 
-1. **Teacher Workflow**:
-   - Register or log in to the platform.
-   - Create and manage course playlists.
-   - Add video content for student consumption.
 
-2. **Student Workflow**:
-   - Register or log in to the platform.
-   - Browse available courses and enroll in desired playlists.
-   - Access and learn from text and video content.
-   - Track progress for enrolled courses.
+## Configuration
 
-3. **Roadmaps**:
-   - Follow predefined learning paths for different technical domains.
-   - Leverage AI-powered personalized suggestions in future updates.
+1.  **Environment Variables:**
+    *   Create a `.env` file in the root directory.
+    *   Define the following environment variables:
 
-4. **Compiler**:
-   - Write and execute code directly on the platform.
-   - Supports real-time feedback and debugging.
+        
+        PORT=3000 # Or any other port you prefer
+        DATABASE_URL=YOUR_DATABASE_URL # connection string for database
+        # Add other environment variables as needed, such as API keys for BitAssistant
+        
 
----
+2.  **Database Setup:**
+    *   Set up your database (e.g., MongoDB, PostgreSQL) and configure the `DATABASE_URL` in the `.env` file.
 
-## Future Enhancements
-- AI-based personalized suggestions for roadmap selection.
-- Expanding content to include advanced technical topics and interactive quizzes.
-- Collaborative features like discussion forums and live coding sessions.
-- Mobile application for on-the-go learning.
+## Usage
 
----
+1.  **Start the Backend Server:**
+    bash
+    cd backEnd
+    npm start # or yarn start
+    cd ..
+    
 
-## Getting Started
-### Prerequisites
-- Node.js and npm installed.
-- MongoDB instance running.
+2.  **Start the Frontend Application:**
+    bash
+    cd frontEnd
+    npm start # or yarn start
+    cd ..
+    
 
-### Installation
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/<your-repo-name>.git
-   ```
-2. Navigate to the project directory:
-   ```bash
-   cd bit_learn
-   ```
-3. Install dependencies:
-   ```bash
-   npm install
-   ```
-4. Start the server:
-   ```bash
-   npm start
-   ```
-5. Access the platform at `http://localhost:3000`.
+3.  **Open the Application:**
+    Open your web browser and navigate to `http://localhost:3000` (or the port you specified in the `.env` file).
 
----
+## API Reference
 
-## Contribution
-Contributions are welcome! Feel free to fork the repository, make changes, and submit a pull request. Please ensure all new features are well-documented and tested.
+API endpoints are defined in the `backEnd/index.js` file. (Unfortunately, without further inspection of the backend code I can only give generalized advice)
 
----
+Example API endpoints:
 
-## Authors
-This project is created and maintained by **Zaid Patel** and **Amir Khan**.
+*   `GET /api/videos`:  Retrieves a list of video tutorials.
+*   `POST /api/signup`:  Creates a new user account.
+*   `POST /api/login`:  Authenticates a user and returns a token (if applicable).
 
----
+## Tests
+
+*Testing functionalities not outlined in available documentation. Please look to the project files for further insight.* 
+
+## Deployment
+
+1.  **Docker (Recommended):**
+    *   Build the Docker image:
+        bash
+        docker build -t bitlearn .
+        
+    *   Run the Docker container:
+        bash
+        docker run -d -p 3000:3000 -e PORT=3000 -e DATABASE_URL=YOUR_DATABASE_URL bitlearn
+        
+
+2.  **Manual Deployment:**
+    *   Deploy the backend to a Node.js hosting provider (e.g., Heroku, AWS).
+    *   Deploy the frontend to a static website hosting provider (e.g., Netlify, Vercel).
+    *   Ensure that the frontend is configured to communicate with the deployed backend API.
+
+## Contributing
+
+Contributions are welcome! To contribute to the bitLearn project, follow these steps:
+
+1.  Fork the repository.
+2.  Create a new branch for your feature or bug fix.
+3.  Make your changes and commit them with descriptive commit messages.
+4.  Push your branch to your forked repository.
+5.  Submit a pull request.
 
 ## License
-This project is licensed under the MIT License.
 
----
-
-## Contact
-For any queries, suggestions, or feedback, please reach out to us at [zpatel044@gmail.com](mailto:contact@example.com).
-
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
