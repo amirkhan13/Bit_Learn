@@ -2,23 +2,28 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-BitLearn is a full-stack web application designed to provide users with a comprehensive platform for learning programming concepts and data structures. It offers video tutorials, interactive coding environments (supporting multiple languages), a personalized learning roadmap, and community features. The application leverages Node.js with Express for the backend, React for the frontend, and MongoDB for persistent data storage. We've moved away from mobile application focus, concentrating efforts on an exceptional web-based experience first.
+## Description
+
+BitLearn is a full-stack web and mobile application designed to provide users with a platform for learning various programming languages, data structures and algorithms. It features a user-friendly interface, interactive coding environment (compiler), video tutorials, and roadmaps to guide learners through their programming journey.
+
+The frontend is built with HTML, CSS, and JavaScript, offering a dynamic user experience. The backend, powered by Node.js, manages user authentication, data storage, and API endpoints. The application uses a database to store user data and course information.
 
 ## Features
 
-*   **User Authentication:** Secure signup, login, and password management.
-*   **Video Tutorials:** Integration of embedded video content to explain concepts, now with enhanced search and filtering.
-*   **Interactive Compiler:** Online compiler to practice coding skills with support for multiple programming languages (see Language Support).
-*   **Learning Roadmap:** A structured, personalized path to guide users through different topics. Roadmaps are dynamically generated based on user skill level and selected languages.
-*   **Responsive Design:** Adaptable user interface optimized for web browsers.
-*   **Language-Specific Content:** Curated content for various programming languages (HTML, CSS, JavaScript, Python, C++, Java, PHP, DSA).
-*   **Community Forum:** Users can now interact with each other, ask questions, and share their learning experiences.
-*   **Progress Tracking:** Users can track their progress on the learning roadmap and see which lessons they have completed.
-*   **Code Challenges:** Test your knowledge with coding challenges at the end of each lesson.
+*   **Interactive Code Compiler:** Allows users to write and execute code directly in the browser for multiple languages.
+*   **Video Tutorials:** Integrates with a YouTube playlist to provide video-based learning content.
+*   **Learning Roadmaps:** Offers structured learning paths for different technologies (e.g., HTML, CSS, JavaScript, Python, C++, Java, DSA).
+*   **User Authentication:** Secure signup and login functionality to personalize the learning experience.
+*   **Responsive Design:** Adapts to different screen sizes, ensuring a seamless experience on both web and mobile devices.
+*   **Search functionality:** Allows users to search learning resources
 
 ## Screenshots/Demos
 
-*Add screenshots or links to demo videos here to showcase the application's interface and functionality.*
+*Unfortunately, I don't have the ability to access external websites or local files so I can't embed any images. You can add screenshots here.*  Example:
+
+![Homepage](link/to/homepage_screenshot.png)
+
+![Compiler](link/to/compiler_screenshot.png)
 
 ## Installation
 
@@ -29,32 +34,35 @@ BitLearn is a full-stack web application designed to provide users with a compre
     cd Bit_Learn
     
 
-2.  Install dependencies for both the backend and frontend. It is assumed `npm` is used, but `yarn` can be substituted.
+2.  Install backend dependencies:
 
     bash
-    # Backend
     cd backEnd
-    npm install
+    npm install  # or yarn install
     cd ..
+    
 
-    # Frontend
+3.  Install frontend dependencies (if applicable and needed, this may just use CDN):
+
+    bash
     cd frontEnd
-    npm install
+    # Potentially npm install or yarn install if you have a package.json in frontend
     cd ..
     
 
 ## Configuration
 
-1.  Create a `.env` file in the root directory. Refer to the `.env.example` file in the repository for the required environment variables. The following variables are *required*:
+1.  Create a `.env` file in the root directory.
+2.  Add the following environment variables:
 
     
-    PORT=3000
-    DATABASE_URL=mongodb://user:password@host:port/database
-    SESSION_SECRET=your_session_secret
-    JWT_SECRET=your_jwt_secret
+    PORT=3000  # Example port for the backend
+    DATABASE_URL=your_database_connection_string
+    JWT_SECRET=your_jwt_secret # Secret key for JWT
+    # Add any other necessary environment variables
     
 
-2.  Configure the database connection in `backEnd/db/db.js` with the appropriate MongoDB connection string, matching the `DATABASE_URL` in the `.env` file.
+    Make sure to replace `your_database_connection_string` with the actual database connection string and `your_jwt_secret` with a secure secret key.
 
 ## Usage
 
@@ -62,124 +70,66 @@ BitLearn is a full-stack web application designed to provide users with a compre
 
     bash
     cd backEnd
-    npm start
+    npm start  # or yarn start
     cd ..
     
 
-2.  Open a new terminal and start the frontend development server:
-
-    bash
-    cd frontEnd
-    npm start
-    cd ..
-    
-
-3.  Access the application in your browser at `http://localhost:3000` (or the specified port in your `.env` file).
-
-## Docker
-
-This project includes Dockerfiles for both the backend and frontend, allowing for containerized deployment.
-
-To build and run the application using Docker:
-
-1.  Navigate to the project root directory.
-2.  Build the Docker images:
-
-    bash
-    docker-compose build
-    
-
-3.  Run the Docker containers:
-
-    bash
-    docker-compose up
-    
-
-This will start the backend and frontend services in separate containers.  Ensure Docker and Docker Compose are installed on your system. The `docker-compose.yml` file defines the services, networks, and volumes needed to run the application. You may need to adjust environment variables within the `docker-compose.yml` to match your configuration, particularly the `DATABASE_URL` to point to a containerized MongoDB instance or an external MongoDB database.
+2.  Open the `frontEnd/index.html` file in your web browser to access the application, or if the frontend has a server start it as well.
 
 ## API Reference
 
-*Details about the backend API endpoints should be documented here. Specify endpoints, request methods, parameters, and response formats.*
+*Assuming API routes are defined in `backEnd/index.js`*.
 
-Example:
-
-*   `POST /api/auth/signup`: Creates a new user account.
-    *   Request body:
-
-        
-        {
-          "username": "string",
-          "email": "string",
-          "password": "string"
-        }
-        
-
-    *   Response:
-
-        
-        {
-          "message": "User created successfully",
-          "userId": "string"
-        }
-        
-
-*   `POST /api/auth/login`: Logs in an existing user.
-    *   Request body:
-
-        
-        {
-          "email": "string",
-          "password": "string"
-        }
-        
-
-    *   Response:
-
-        
-        {
-          "message": "Login successful",
-          "token": "string",
-          "userId": "string"
-        }
-        
+*   **`GET /`**:  Returns the homepage/index page.
+*   **`POST /signup`**: Registers a new user.
+*   **`POST /login`**: Logs in an existing user.
+*   **`GET /roadmap`**: Fetches learning roadmaps.
+*   **`GET /courses`**: Fetches a list of available courses.
+*   **`GET /courses/:id`**: Fetches details of a specific course.
+*   *Add any other specific API endpoints here. Specify request types, parameters, and response formats.* The specific routes should be found in the backend code, most likely `backEnd/index.js`.
 
 ## Tests
 
-*Information about running tests, if implemented, should be included here.* Unit tests are performed with Jest, integration tests with Cypress.
+*Testing is not evident based on the project information. Add testing instructions if tests exist.* Example:
 
-To run the tests:
+To run tests, use the following command:
 
 bash
-# Backend
 cd backEnd
-npm test
-cd ..
+npm test # Or yarn test, depending on the testing framework
 
-# Frontend
-cd frontEnd
-npm test:unit
-npm test:e2e
-cd ..
 
 
 ## Deployment
 
-1.  **Backend:** Deploy the Node.js backend to a platform like Heroku, AWS, Google Cloud Platform, or Digital Ocean. Ensure the `NODE_ENV` environment variable is set to `production`.
-2.  **Frontend:** Deploy the static frontend files (HTML, CSS, JavaScript) to a CDN or a web server like Nginx or Netlify. Configure the frontend to point to the deployed backend API.
-3.  Set up a CI/CD pipeline for automated deployments.
+### Using Docker:
+
+1.  Build the Docker image:
+
+    bash
+    docker build -t bit_learn .
+    
+
+2.  Run the Docker container:
+
+    bash
+    docker run -p 3000:3000 bit_learn
+    
+
+### Other deployment options:
+
+*   **Heroku:** Deploy the Node.js backend to Heroku.
+*   **Netlify/Vercel:** Deploy the frontend to Netlify or Vercel (if it's a static site or uses a frontend framework with serverless functions).
+*   **AWS/GCP/Azure:**  Deploy both frontend and backend to cloud providers like AWS, GCP, or Azure using services like EC2, App Engine, or Azure App Service.
 
 ## Contributing
 
-Contributions are welcome! Please follow these steps:
+Contributions are welcome! To contribute to BitLearn, please follow these steps:
 
 1.  Fork the repository.
 2.  Create a new branch for your feature or bug fix.
-3.  Make your changes and commit them with descriptive messages. Follow the established code style.
+3.  Make your changes.
 4.  Submit a pull request.
-
-## GitHub
-
-We use GitHub for version control and issue tracking.  Please feel free to open issues for bug reports, feature requests, or general questions.  You can also contribute by submitting pull requests as described in the Contributing section.
 
 ## License
 
