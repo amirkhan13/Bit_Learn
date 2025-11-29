@@ -76,6 +76,27 @@ BitLearn is a full-stack web application designed to provide users with a compre
 
 3.  Access the application in your browser at `http://localhost:3000` (or the specified port in your `.env` file).
 
+## Docker
+
+This project includes Dockerfiles for both the backend and frontend, allowing for containerized deployment.
+
+To build and run the application using Docker:
+
+1.  Navigate to the project root directory.
+2.  Build the Docker images:
+
+    bash
+    docker-compose build
+    
+
+3.  Run the Docker containers:
+
+    bash
+    docker-compose up
+    
+
+This will start the backend and frontend services in separate containers.  Ensure Docker and Docker Compose are installed on your system. The `docker-compose.yml` file defines the services, networks, and volumes needed to run the application. You may need to adjust environment variables within the `docker-compose.yml` to match your configuration, particularly the `DATABASE_URL` to point to a containerized MongoDB instance or an external MongoDB database.
+
 ## API Reference
 
 *Details about the backend API endpoints should be documented here. Specify endpoints, request methods, parameters, and response formats.*
