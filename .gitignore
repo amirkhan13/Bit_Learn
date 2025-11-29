@@ -1,2 +1,70 @@
+node_modules/
+dist/
+build/
+.cache
+.DS_Store
+*.log
+*.swp
+*.lock
+npm-debug.log*
+yarn-error.log*
+
+# IDE and Editor
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.user
+*.bak
+*.tmp
+
+# OS generated files #
+.DS_Store
+Thumbs.db
+
+# Environment Configuration
 .env
-/node_modules
+.env.local
+.env.development
+.env.development.local
+.env.production
+.env.production.local
+
+# Dependency directories
+jspm_packages/
+
+# Build outputs & cache files
+dist/
+build/
+tmp/
+temp/
+.tmp/
+coverage/
+*.map
+
+# Log files
+*.log
+*.log.*
+*-debug.log*
+*-error.log*
+
+# Ignore ALL node_modules except for important files
+!/node_modules/.bin
+!/node_modules/*/*/bin
+
+# Temporary files
+*.tmp
+*~
+# Packaging results
+*.nupkg
+*.snupkg
+
+# Visual Studio
+*.csproj.user
+*.sln.docstates
+*.cache
+obj/
+bin/
+[Bb]uild/
